@@ -215,7 +215,7 @@ def main(**kwargs):
     if fsdp_config.pure_bf16 and fsdp_config.optimizer == "anyprecision":
         optimizer = AnyPrecisionAdamW(model.parameters(), lr=train_config.lr, momentum_dtype=torch.bfloat16, variance_dtype=torch.bfloat16, use_kahan_summation=False)
     else:
-        optimizer = optim.AdamW(model.parameters(), lr=train_config.lr, weight_decay=0.0)
+        optimizer = optim.AdamW(model.parameters(), lr=train_config.lr, weight_decay=0.1)
     scheduler = StepLR(optimizer, step_size=1, gamma=train_config.gamma)
 
     # Start the training process
