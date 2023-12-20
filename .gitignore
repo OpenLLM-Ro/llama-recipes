@@ -2,3 +2,9 @@
 __pycache__
 .ipynb_checkpoints
 agent/offload
+models/*
+ft_datasets/cultura/*
+ft_datasets/grammar_dataset/*
+ft_datasets/graph_dataset/*
+ft_datasets/oasst1/*
+ft_datasets/scraped/*
