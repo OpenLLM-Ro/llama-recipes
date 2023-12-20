@@ -2,7 +2,10 @@ import json
 import copy
 from pathlib import Path
 import sys
-from .utils import Concatenator
+sys.path.insert(1, 'inference/')
+sys.path.insert(1, 'utils/')
+from utils import Concatenator, ConcatDataset
+from chat_utils import format_tokens
 import pandas as pd
 import datasets
 import random
@@ -10,25 +13,19 @@ random.seed(1238)
 
 msgid_position = {}
 
-system_prompt = """<s>[INST] <<SYS>>
-You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe.  Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
-
-If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
-<</SYS>>
-
-"""
-
-def convert_conversation_to_format(conv):
-    prompt = system_prompt
-
-    for ix, x in enumerate(conv):
-        if ix % 2 == 0:
-            # user time
-            prompt += conv[ix] + " [/INST] "
+def convert_conv_to_hf(conv):
+    new_conv = []
+    for c in conv:
+        inner_d = {}
+        if c[0] == "prompter":
+            inner_d["role"] = "user"
         else:
-            # prompt time
-            prompt += conv[ix] + " </s><s>[INST] "
-    return prompt
+            inner_d["role"] = "assistant"
+        inner_d["content"] = c[1]
+        # print(inner_d)
+
+        new_conv.append(inner_d)
+    return new_conv
 
 
 def build_msgid_dict(msgs):
@@ -54,6 +51,7 @@ def get_node_text(node):
         return node["text_translated_ro"]
     else:
         return node["text"]
+
 
 def extract_conversation(root, level, msg_list, msgs, full_conv_list, fully_translated, fully_validated):
 
@@ -96,26 +94,37 @@ def extract_conversation(root, level, msg_list, msgs, full_conv_list, fully_tran
 def build_dataset_and_stats(convs):
     all_messages = []
     for conv in convs:
-        all_messages.extend(list(map(lambda x: x[1], conv)))
+        all_messages.extend(list(map(lambda x: x[1], conv["conv"])))
 
     print("Total conversations in ro:", len(convs))
     print("Total messages:", len(all_messages))
     print("Total distinct messages:", len(set(all_messages)))
-    full_convs = get_fulls_convs(convs)
+    full_convs = get_full_conv(convs)
 
     print("Total conversations to model:", len(full_convs))
     return full_convs    
 
-def get_fulls_convs(convs):
+def get_full_conv(convs):
     
     full_convs = []
     for conv in convs:
-        chrono_conv = conv[::-1]
+        if conv["order"] == "reversed":
+            chrono_conv = conv["conv"][::-1]
+        elif conv["order"] == "normal":
+            chrono_conv = conv["conv"]
+        # print(chrono_conv)
         for msg_index, msg in enumerate(chrono_conv):
             if msg[0] == 'assistant':
                 so_far = chrono_conv[:msg_index+1]
-                crt_msgs = list(map(lambda x: x[1], so_far))
-                full_convs.append(crt_msgs)
+                so_far_converted = convert_conv_to_hf(so_far)
+                
+                # print("converted:", so_far_converted)
+                # print(format_tokens([so_far_converted], tokenizer))
+                # crt_msgs = list(map(lambda x: x[1][:50], so_far))
+                # print(crt_msgs)
+                # sys.exit()
+                # full_convs.append(crt_msgs)
+                full_convs.append(so_far_converted)
 
     return full_convs
 
@@ -123,7 +132,7 @@ def load_dataset(split = None):
     global msgid_position
     random.seed(1238)
 
-    msg_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.messages-ro-translated-mbart-good.jsonl")
+    msg_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.messages-ro-translated-mbart.jsonl")
     # msg_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.messages.jsonl")
     tree_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.trees.jsonl")
 
@@ -136,7 +145,7 @@ def load_dataset(split = None):
                 ro += 1
     msgid_position = build_msgid_dict(msgs)
     print("Total ro messages:", ro)
-    
+    # sys.exit()
     c = 0
     convs = []
     train_convs, dev_convs, test_convs = [], [], []
@@ -163,26 +172,37 @@ def load_dataset(split = None):
                 
                 if translated == True:
                     rs = random.random()
+                    dcs = []
+                    for xs in x:
+                        dc = {}
+                        dc["source"] = "oasst"
+                        dc["conv"] = xs
+                        dc["order"] = "reversed"
+                        dcs.append(dc)
+
                     if rs < 0.85:
-                        train_convs.extend(x)
+                        train_convs.extend(dcs)
                     elif rs < 0.9:
-                        dev_convs.extend(x)
+                        dev_convs.extend(dcs)
                     else:
-                        test_convs.extend(x)
-                    convs.extend(x)
+                        test_convs.extend(dcs)
+                    
+                    convs.extend(dcs)
                     c += 1
 
     print(len(train_convs), len(dev_convs), len(test_convs))
     print(len(convs))
     print("Total distinct threads in ro:", c)
+    # sys.exit()
     
-
-    if split == "full":
+    if split == "full" or 1 == 1:
 
         ctrain = copy.deepcopy(train_convs)
         cdev = copy.deepcopy(dev_convs)
         print("FULL:")
+
         full_convs = build_dataset_and_stats(convs)
+        sys.exit()
 
 
         print("TRAIN:")
@@ -199,6 +219,7 @@ def load_dataset(split = None):
         print("TEST:")
         test_convs = build_dataset_and_stats(test_convs)
 
+        return full_convs
 
 
     elif split == "train":
@@ -225,34 +246,35 @@ def load_dataset(split = None):
         print("Unrecognized {0} split.".format(split))
         sys.exit()
 
-    
 
+def get_hf_dict(conv):
+    hf_dict = {}
+    hf_dict["input_ids"] = format_tokens([conv], tokenizer)[0]
+    hf_dict["token_type_ids"] = [0] * len(hf_dict["input_ids"])
+    hf_dict["attention_mask"] = [1] * len(hf_dict["input_ids"])
+    hf_dict["labels"] = hf_dict["input_ids"].copy()
+    return hf_dict
 
 def get_preprocessed_oasst1(dataset_config, tokenizer, split):
 
     convs = load_dataset(split=split)
     def apply_prompt_template(sample):
-        return {
-            "text": convert_conversation_to_format(sample)
-        }
+        return {"text": get_hf_dict(sample)}
     dataset = list(map(lambda x: apply_prompt_template(x), convs))
     dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=dataset))
-    dataset = dataset.map(
-        lambda sample: tokenizer(sample["text"]),
-        batched=True,
-        remove_columns=list(dataset.features),
-    ).map(Concatenator(), batched=True)
+    dataset = dataset.map(lambda sample: sample["text"], batched=False, remove_columns=list(dataset.features))
+    dataset = ConcatDataset(dataset, chunk_size=4096)
     return dataset
 
 
 
 
 if __name__ == "__main__":
-    # from transformers import AutoTokenizer, AutoModelForCausalLM
-    # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token="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")
+    from transformers import AutoTokenizer, AutoModelForCausalLM
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token="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")
 
-    # get_preprocessed_oasst1(None, tokenizer, None)
-    d = load_dataset("full")
-    d = load_dataset("dev")
+    get_preprocessed_oasst1(None, tokenizer, "test")
+    # d = load_dataset("full")
+    # d = load_dataset("dev")
     # print(d)
     # print(len(d))
