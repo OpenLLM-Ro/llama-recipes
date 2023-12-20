@@ -1,0 +1,300 @@
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Care este procedura dacă am lovit mașina altei persoane într-o parcare și nu am cum să contactez persoana vătămată?
+
+### Răspuns:Dacă ați lovit mașina altcuiva într-o parcare și nu puteți contacta persoana vătămată, ar trebui să contactați imediat poliția. Poliția va investiga accidentul și va lua măsurile necesare pentru a se asigura că toate părțile implicate sunt despăgubite.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+În ce an s-a născut Messi?
+
+### Răspuns:Messi s-a născut în 1987.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Scrie o descriere despre România.
+
+### Răspuns:România este o țară din Europa de Est, situată în partea de sud-est a continentului. Este o țară cu o istorie bogată și diversă, cu o cultură și o limbă unice. România este cunoscută pentru frumusețea sa naturală, cu munți, dealuri, câmpii și plaje. Este, de asemenea, cunoscut pentru cultura sa bogată, cu o varietate de tradiții și obiceiuri. România este o țară cu o economie în creștere, cu o populație tânără și oportunități de afaceri.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Am fost implicat într-un accident auto fară victime. Am și rca și casco, ce trebuie să completez?
+
+### Răspuns:Dacă ați fost implicat într-un accident auto fără victime, trebuie să completați o declarație de accident la asiguratorul dvs. RCA. Aceasta va fi folosită pentru a determina cine este vinovat pentru accident și pentru a stabili despăgubirile. În plus, trebuie să completați o declarație de accident la asiguratorul dvs. Casco, dacă aveți asigurare Casco. Aceasta va fi folosită pentru a determina cine este vinovat pentru accident și pentru a stabili despăgubirile.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+De ce echipament ai nevoie să faci scuba diving?
+
+### Răspuns:Pentru a face scufundări, aveți nevoie de un costum de scufundări, un set de scufundări, un regulator de scufundări, un set de ochelari de scufundări, un set de mănuși de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set de picioare de scufundări, un set
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Care este rezultatul următorului calcul: 2x4 + 3?
+
+### Răspuns:Rezultatul calculului este 10.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Ce jocuri de societate pot juca cu prietenii mei?
+
+### Răspuns:Există multe jocuri de societate pe care le puteți juca cu prietenii dvs. Acestea includ jocuri de cărți precum Uno, Rummy, și Spades, jocuri de masă precum Monopoly, Scrabble, și Scattergories, și jocuri de strategie precum Settlers of Catan, Pandemic, și Ticket to Ride.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Care este amenda pentru depășirea vitezei legale?
+
+### Răspuns:Depășirea vitezei legale poate duce la amendă, suspendarea permisului de conducere și chiar la închisoare. Amenda pentru depășirea vitezei legale poate varia în funcție de stat, dar este de obicei în jur de 100-200 de dolari. În plus, puteți fi obligat să plătiți și penalizări pentru orice zile de închisoare pe care le-ați fi primit dacă ați fi fost condamnat.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Cine a scris poezia Floare albastra?
+
+### Răspuns:Poezia Floare albastra a fost scrisă de William Blake.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Cine este președintele Franței?
+
+### Răspuns:Președintele Franței este Emmanuel Macron.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Care este cel mai înalt vârf muntos din România?
+
+### Răspuns:Cel mai înalt vârf muntos din România este Vârful Moldoveanu, situat în Munții Făgăraș, la o altitudine de 2.544 de metri.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Vreau să merg la mare. Ce stațiuni îmi recomanzi?
+
+### Răspuns:Îmi place să merg la plajă în Florida, deoarece are o mulțime de plaje frumoase și o mulțime de activități de făcut.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Cât durează zborul New York - Sydney?
+
+### Răspuns:Zborul New York - Sydney durează aproximativ 15 ore și 50 de minute.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Unde se varsă fluviul Dunărea?
+
+### Răspuns:Fluviul Dunărea se varsă în Marea Neagră.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Ce trebuie să fac în caz de accident auto? Care sunt primii pași?
+
+### Răspuns:În cazul unui accident auto, primii pași sunt să opriți mașina, să verificați dacă toți pasagerii sunt în siguranță și să sunați la poliție. Dacă este necesar, asigurați-vă că victimele primesc îngrijiri medicale și asigurați-vă că vehiculul este sigur înainte de a pleca.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Dă-mi două variante de mic dejun.
+
+### Răspuns:Variantele de mic dejun includ ouă prăjite cu legume și unt de arahide, sau un smoothie de banane și lapte.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Câte județe are România?
+
+### Răspuns:România are 41 de județe.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Cum se completează constatarea amiabilă în caz de accident?
+
+### Răspuns:O constatare amiabilă în caz de accident este un document care este semnat de ambele părți implicate într-un accident auto. Acesta este folosit pentru a stabili responsabilitatea pentru accident și pentru a stabili despăgubirile.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Care sunt vecinii României?
+
+### Răspuns:România are 11 vecini: Ungaria, Slovacia, Ucraina, Polonia, Republica Cehă, Austria, Serbia, Bulgaria, Moldova și Ungaria.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Scrie 3 cuvinte în română și 3 cuvinte în engleză.
+
+### Răspuns:Cuvinte în română: 
+Cuvinte în engleză:
+
+--------------------------------------------------
+
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Cum se spune la copac în engleză?
+
+### Răspuns:Tree.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Aș dori sa încep sa fac astrofotografie ca hobby. De unde să încep?
+
+### Răspuns:Pentru a începe să faceți astrofotografie ca hobby, începeți prin a cumpăra un telescop și un obiectiv. Apoi, asigurați-vă că aveți un loc cu o vedere clară a cerului, cum ar fi un camp deschis sau un deal. În cele din urmă, asigurați-vă că aveți un aparat foto digital sau un smartphone cu o cameră bună.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Cât este salariul minim în România?
+
+### Răspuns:Salariul minim în România este de 2.300 de lei pe lună.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Care sunt personajele principale din filmul Cars?
+
+### Răspuns:Personajele principale din filmul Cars sunt Lightning McQueen, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone, Sally Carrera, Doc Hudson, Mater, Guido, Luigi, Fillmore, Sarge, Flo, Ramone,
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Câte patrățele are o tablă de șah?
+
+### Răspuns:O tablă de șah are 64 de pătrățele.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Cam cât costă o Dacia Logan?
+
+### Răspuns:Prețul unei Dacia Logan variază în funcție de modelul și de opțiunile selectate, dar în general costă între 10.000 și 15.000 de euro.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+De la ce varstă vorbesc copiii?
+
+### Răspuns:Copiii încep să vorbească în jurul vârstei de 1 an.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Au ajuns oameni pe lună?
+
+### Răspuns:Da, oamenii au ajuns pe lună în 1969.
+
+--------------------------------------------------
+
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Ce este COVID-19?
+
+### Răspuns:COVID-19 este o boală infecțioasă cauzată de un nou tip de coronavirus. A fost declarată o pandemie de Organizația Mondială a Sănătății în martie 2020. Boala a fost cauzată de un nou tip de coronavirus, numit SARS-CoV-2, care a fost detectat pentru prima dată în Wuhan, China, în decembrie 2019. Boala a fost transmisă de la oameni la oameni prin picături de aer și poate provoca simptome variind de la ușoare la severe, inclusiv febră, tuse, dificultăți de respirație și pierderea gustului sau mirosului.
+
+--------------------------------------------------
+
+Mai jos este o instrucțiune care descrie o sarcină. Scrieți un răspuns care completează în mod corespunzător cererea.
+
+### Instrucțiune:
+Pe ce fus orar se află Atena?
+
+### Răspuns:Atena se află pe fusul orar UTC + 3.
+
+--------------------------------------------------
