@@ -113,7 +113,10 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model):
     return prompt_tokens
 
 
-def format_conv(dialog):
+def format_conv(dialog, system_prompt=None):
+    if system_prompt == None:
+        system_prompt = DEFAULT_SYSTEM_PROMPT
+    
     # print("dialog:", dialog)
     dialog_text = ""
     # print("dialog:", dialog)
@@ -122,7 +125,7 @@ def format_conv(dialog):
             dialog = [
                 {
                     "role": "system",
-                    "content": DEFAULT_SYSTEM_PROMPT,
+                    "content": system_prompt,
                 }
             ] + dialog
     # print(list(map(lambda x: x["role"], dialog)))    
