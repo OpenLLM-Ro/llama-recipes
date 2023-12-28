@@ -34,6 +34,23 @@ class chat_dataset:
     test_split: str = "test"
     max_words: int = 2048
 
+
+@dataclass
+class foundational_dataset:
+    dataset: str = "foundational_dataset"
+    train_split: str = "train+dev"
+    test_split: str = "test"
+    max_words: int = 2048
+
+
+@dataclass
+class conversations_dataset:
+    dataset: str = "conversations_dataset"
+    train_split: str = "train+dev"
+    test_split: str = "test"
+    max_words: int = 2048
+
+
 @dataclass
 class b_dataset:
     dataset: str = "b_dataset"

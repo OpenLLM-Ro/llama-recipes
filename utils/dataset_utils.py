@@ -11,7 +11,10 @@ from ft_datasets import (
     get_samsum_dataset,
     get_chat_dataset,
     get_b_dataset,
-    get_graph_dataset
+    get_graph_dataset,
+    get_foundational_dataset,
+    get_conversations_dataset
+
 )
 from typing import Optional
 
@@ -22,7 +25,9 @@ DATASET_PREPROC = {
     "samsum_dataset": get_samsum_dataset,
     "chat_dataset": get_chat_dataset,
     "b_dataset": get_b_dataset,
-    "graph_dataset": get_graph_dataset
+    "graph_dataset": get_graph_dataset,
+    "foundational_dataset": get_foundational_dataset,
+    "conversations_dataset": get_conversations_dataset
 }
 
 
