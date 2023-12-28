@@ -1,12 +1,9 @@
 import json
 import copy
 from pathlib import Path
-import torch
 import sys
 sys.path.insert(1, 'inference/')
 sys.path.insert(1, 'utils/')
-# from utils import ConcatDataset
-from torch.utils.data import Dataset
 from chat_utils import format_conv, format_tokens
 import pandas as pd
 import datasets
@@ -14,12 +11,11 @@ import os
 import random
 import nltk
 nltk.download('punkt', quiet=True)
-import pickle
 
 top = -1
 nproc = 10
 
-dataset_scraped_path = "ft_datasets/scraped/scraped_convs_1.json"
+dataset_scraped_path = "ft_datasets/scraped/scraped_convs.json"
 LOADED_DATA = None
 
 PROMPT = """\
@@ -274,23 +270,12 @@ def get_split(convs, split):
     return split_convs
 
 
-def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split):
-
-    def apply_prompt_template(sample):
-        return {"text": format_conv(sample)}
+def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, compute_stats=False):
 
     if dataset_config == None:
         max_words = 1024
     else:
         max_words = dataset_config.max_words
-
-    def chunk_list(lst, n):
-        """Yield successive n-sized chunks from lst."""
-        for i in range(0, len(lst), n):
-            yield lst[i:i + n]
-
-    def get_text(sample):
-        return {"text": " ".join(x[1] for x in sample["conv"])}
 
     def encode_texts(sample, tokenizer):
         return tokenizer(sample["conv"])
@@ -543,6 +528,16 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split):
     prompt_enc_size = len(prompt_enc)
 
     dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, batched=True, desc="Tokenize texts", remove_columns=["conv", "order"])
+    if compute_stats == True:
+        import numpy as np
+        lens = np.array(list(map(lambda x: len(x["input_ids"])+1, dataset)))
+        print(len(lens))
+        print(np.min(lens), np.mean(lens), np.median(lens), np.max(lens), np.quantile(lens, 0.75), np.quantile(lens, 0.85), np.quantile(lens, 0.90))
+        for i in [256, 512, 1024, 2048, 4096]:
+            print("{0}% over {1}".format(100.0*(lens>i).sum()/len(lens), i))
+        print("########################################################################################")
+        print()
+
     dataset = dataset.map(lambda sample: prepare_input(sample, prompt_enc, tokenizer, max_words), num_proc=nproc, remove_columns=["attention_mask", "input_ids"], desc="Build chunks of size {0}".format(max_words))
     dataset = dataset.shuffle(seed=42)
     columns_to_remove = dataset.column_names + ["hf_dict_chunks"]
@@ -561,5 +556,5 @@ if __name__ == "__main__":
     from transformers import AutoTokenizer, AutoModelForCausalLM, LlamaTokenizer
     tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
     tokenizer.add_special_tokens({"additional_special_tokens": ["[INST]", "[/INST]", "<<SYS>>\n", "\n<</SYS>>\n\n"]})
-    get_preprocessed_conversations_dataset(None, tokenizer, "dev")
+    get_preprocessed_conversations_dataset(None, tokenizer, "full", compute_stats=True)
     
