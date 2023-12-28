@@ -13,7 +13,8 @@ from ft_datasets import (
     get_b_dataset,
     get_graph_dataset,
     get_foundational_dataset,
-    get_conversations_dataset
+    get_conversations_dataset,
+    get_roalpaca_dataset
 
 )
 from typing import Optional
@@ -27,7 +28,8 @@ DATASET_PREPROC = {
     "b_dataset": get_b_dataset,
     "graph_dataset": get_graph_dataset,
     "foundational_dataset": get_foundational_dataset,
-    "conversations_dataset": get_conversations_dataset
+    "conversations_dataset": get_conversations_dataset,
+    "roalpaca_dataset": get_roalpaca_dataset
 }
 
 

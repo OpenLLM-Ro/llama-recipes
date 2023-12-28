@@ -42,6 +42,14 @@ class foundational_dataset:
     test_split: str = "test"
     max_words: int = 2048
 
+@dataclass
+class roalpaca_dataset:
+    dataset: str = "roalpaca_dataset"
+    train_split: str = "train+dev"
+    test_split: str = "test"
+    max_words: int = 2048
+
+
 
 @dataclass
 class conversations_dataset:
