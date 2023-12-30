@@ -16,7 +16,7 @@ import random
 
 
 
-
+top = -1
 nproc = 10
 
 LOADED_INSTRUCTIONS = None
@@ -68,7 +68,7 @@ def get_preprocessed_roalpaca_dataset(dataset_config, tokenizer, split, compute_
             if sample["instruction"].endswith("."):
                 sample["instruction"] = sample["instruction"][:-1]
             content = "{0}: {1}".format(sample["instruction"], sample["input"])
-        
+
         x = [{"role": "user", "content": content}]
         prompt = format_conv(x)
 
@@ -104,6 +104,9 @@ def get_preprocessed_roalpaca_dataset(dataset_config, tokenizer, split, compute_
 
     instructions = _load_instructions()
     instructions = get_split(instructions, split)
+    if top != -1:
+        instructions = instructions[:top]
+
 
     dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=instructions))
     dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["instruction", "input"], desc="Extract texts")

@@ -9,8 +9,6 @@ import pandas as pd
 import datasets
 import os
 import random
-import nltk
-nltk.download('punkt', quiet=True)
 
 top = -1
 nproc = 10
@@ -556,5 +554,5 @@ if __name__ == "__main__":
     from transformers import AutoTokenizer, AutoModelForCausalLM, LlamaTokenizer
     tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
     tokenizer.add_special_tokens({"additional_special_tokens": ["[INST]", "[/INST]", "<<SYS>>\n", "\n<</SYS>>\n\n"]})
-    get_preprocessed_conversations_dataset(None, tokenizer, "full", compute_stats=True)
+    get_preprocessed_conversations_dataset(None, tokenizer, "train")
     
