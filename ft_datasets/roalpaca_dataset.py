@@ -98,6 +98,7 @@ def get_preprocessed_roalpaca_dataset(dataset_config, tokenizer, split, compute_
         # build labels
         sample["labels"] = copy.deepcopy(sample["input_ids"])
         sample["labels"][:end+1] = [-100] * (end+1)
+        sample["labels"] = sample["labels"][:max_tokens]
     
         return {"input_ids": sample["input_ids"], "attention_mask": sample["attention_mask"], "labels": sample["labels"]}
 
