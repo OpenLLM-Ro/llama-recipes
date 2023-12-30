@@ -10,18 +10,18 @@ class train_config:
     enable_fsdp: bool= False 
     low_cpu_fsdp: bool=False
     run_validation: bool=True
-    batch_size_training: int=16
+    batch_size_training: int=64
     num_epochs: int=1
     num_workers_dataloader: int=2
-    lr: float=1e-4
+    lr: float=5e-5
     weight_decay: float=0.0
     gamma: float= 0.90 #0.85
     seed: int=42
     use_fp16: bool=False
     mixed_precision: bool=True
-    val_batch_size: int=16
+    val_batch_size: int=64
     dataset = "samsum_dataset"
-    micro_batch_size: int=16
+    micro_batch_size: int=64
     peft_method: str = "lora" # None , llama_adapter, prefix
     use_peft: bool=False
     output_dir: str = "PATH/to/save/PEFT/model"
@@ -35,7 +35,7 @@ class train_config:
     save_optimizer: bool=False # will be used if using FSDP
     load_peft_model: str = "False"
     use_fast_kernels: bool = False
-    type_of_model: str = "foundational"
+    type_of_model: str = "chat"
 
     
     

@@ -17,7 +17,7 @@ import random
 
 
 top = -1
-nproc = 10
+nproc = 2
 
 LOADED_INSTRUCTIONS = None
 

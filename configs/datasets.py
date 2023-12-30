@@ -47,7 +47,7 @@ class roalpaca_dataset:
     dataset: str = "roalpaca_dataset"
     train_split: str = "train+dev"
     test_split: str = "test"
-    max_words: int = 2048
+    max_words: int = 512
 
 
 
