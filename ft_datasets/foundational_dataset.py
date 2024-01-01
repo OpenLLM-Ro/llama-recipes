@@ -16,8 +16,8 @@ import nltk
 nltk.download('punkt', quiet=True)
 import pickle
 
-top = 1000
-nproc = 4
+top = -1
+nproc = 6
 
 LOADED_DATA = None
 LOADED_CULTURAX = None
