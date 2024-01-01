@@ -12,8 +12,6 @@ import pandas as pd
 import datasets
 import os
 import random
-import nltk
-nltk.download('punkt', quiet=True)
 import pickle
 
 top = -1
