@@ -195,7 +195,7 @@ def load_model_checkpoint(model, rank, path):
     # integrate into loaded model
     model.load_state_dict(model_checkpoint)
 
-    
+    print("Loaded model from path:", path)
     print(f"model checkpoint loaded to rank0 cpu")
     return model
 
