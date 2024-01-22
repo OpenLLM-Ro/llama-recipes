@@ -15,7 +15,7 @@ from chat_utils import format_conv, format_tokens
 import random
 
 top = -1
-nproc = 2
+nproc = 1
 
 LOADED_INSTRUCTIONS = None
 
@@ -23,18 +23,14 @@ def _load_instructions():
     global LOADED_INSTRUCTIONS
     if LOADED_INSTRUCTIONS == None:
         full_instructions = []
-        # long
-        data_path = Path("ft_datasets/ro_alpaca/alpaca_data_cleaned_ro.json")
+        # train
+        data_path = Path("ft_datasets/ro_norobots/train_sft-00000-of-00001-8aba5401a3b757f5-no-robots-ro.json")
         instructions = json.load(open(data_path, encoding="utf-8"))
         full_instructions.extend(instructions)
-        # short
-        data_path = Path("ft_datasets/ro_alpaca/alpaca_data_cleaned_archive_ro.json")
+        # test
+        data_path = Path("ft_datasets/ro_norobots/test_sft-00000-of-00001-fe658ed8e3578d4a-no-robots-ro.json")
         instructions = json.load(open(data_path, encoding="utf-8"))
-        full_instructions.extend(instructions)
-        # gpt4-long
-        data_path = Path("ft_datasets/ro_alpaca/alpaca_gpt4_data_ro.json")
-        instructions = json.load(open(data_path, encoding="utf-8"))
-        full_instructions.extend(instructions)
+        full_instructions.extend(instructions)        
         LOADED_INSTRUCTIONS = full_instructions
 
     return LOADED_INSTRUCTIONS
@@ -62,28 +58,16 @@ def get_split(convs, split):
     return split_convs
 
 
-def get_preprocessed_roalpaca_dataset(dataset_config, tokenizer, split, compute_stats=False):
+def get_preprocessed_ronorobots_dataset(dataset_config, tokenizer, split, compute_stats=False):
 
     if dataset_config == None:
         max_words = 256
     else:
         max_words = dataset_config.max_words
 
-    print("RoAlpaca max words:", max_words)
-
+    print("RoNoRobots max words:", max_words)
     def get_text(sample):
-
-        if sample.get("input", "") == "":
-            content = sample["instruction"]
-        else:
-            if sample["instruction"].endswith("."):
-                sample["instruction"] = sample["instruction"][:-1]
-            content = "{0}: {1}".format(sample["instruction"], sample["input"])
-
-        x = [{"role": "user", "content": content}]
-        prompt = format_conv(x)
-
-        return {"prompt": prompt, "text": prompt + " " + sample["output"]}        
+        return  {"prompt": "", "text": format_conv(sample["messages"])}
     
     def encode_texts(sample, tokenizer):
         return tokenizer(sample["text"])
@@ -121,8 +105,8 @@ def get_preprocessed_roalpaca_dataset(dataset_config, tokenizer, split, compute_
 
 
     dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=instructions))
-    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["instruction", "input", "id"], desc="Extract texts")
-    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc, remove_columns=["output", "prompt"], desc="Tokenize texts")
+    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["prompt", "prompt_id", "messages", "category", "id"], desc="Extract texts")
+    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc, remove_columns=["prompt"], desc="Tokenize texts")
 
     if compute_stats == True:
         import numpy as np
@@ -147,4 +131,4 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
     tokenizer.add_special_tokens({"additional_special_tokens": ["[INST]", "[/INST]", "<<SYS>>\n", "\n<</SYS>>\n\n"]})
 
-    get_preprocessed_roalpaca_dataset(None, tokenizer, "full", compute_stats=True)
+    get_preprocessed_ronorobots_dataset(None, tokenizer, "full", compute_stats=True)

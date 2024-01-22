@@ -22,20 +22,9 @@ LOADED_INSTRUCTIONS = None
 def _load_instructions():
     global LOADED_INSTRUCTIONS
     if LOADED_INSTRUCTIONS == None:
-        full_instructions = []
-        # long
-        data_path = Path("ft_datasets/ro_alpaca/alpaca_data_cleaned_ro.json")
+        data_path = Path("ft_datasets/ro_dolly/databricks-dolly-15k-ro.json")
         instructions = json.load(open(data_path, encoding="utf-8"))
-        full_instructions.extend(instructions)
-        # short
-        data_path = Path("ft_datasets/ro_alpaca/alpaca_data_cleaned_archive_ro.json")
-        instructions = json.load(open(data_path, encoding="utf-8"))
-        full_instructions.extend(instructions)
-        # gpt4-long
-        data_path = Path("ft_datasets/ro_alpaca/alpaca_gpt4_data_ro.json")
-        instructions = json.load(open(data_path, encoding="utf-8"))
-        full_instructions.extend(instructions)
-        LOADED_INSTRUCTIONS = full_instructions
+        LOADED_INSTRUCTIONS = instructions
 
     return LOADED_INSTRUCTIONS
 
@@ -62,28 +51,23 @@ def get_split(convs, split):
     return split_convs
 
 
-def get_preprocessed_roalpaca_dataset(dataset_config, tokenizer, split, compute_stats=False):
+def get_preprocessed_rodolly_dataset(dataset_config, tokenizer, split, compute_stats=False):
 
     if dataset_config == None:
         max_words = 256
     else:
         max_words = dataset_config.max_words
 
-    print("RoAlpaca max words:", max_words)
-
+    print("RoDolly max words:", max_words)
     def get_text(sample):
-
-        if sample.get("input", "") == "":
+        if sample.get("context", "") == "":
             content = sample["instruction"]
         else:
-            if sample["instruction"].endswith("."):
-                sample["instruction"] = sample["instruction"][:-1]
-            content = "{0}: {1}".format(sample["instruction"], sample["input"])
+            content = "{0}\n{1}".format(sample["instruction"], sample["context"])
 
         x = [{"role": "user", "content": content}]
         prompt = format_conv(x)
-
-        return {"prompt": prompt, "text": prompt + " " + sample["output"]}        
+        return {"prompt": prompt, "text": prompt + " " + sample["response"]}        
     
     def encode_texts(sample, tokenizer):
         return tokenizer(sample["text"])
@@ -120,9 +104,15 @@ def get_preprocessed_roalpaca_dataset(dataset_config, tokenizer, split, compute_
         instructions = instructions[:top]
 
 
+    # "instruction": "Când a început să opereze Virgin Australia?",
+    # "context": "Virgin Australia, numele comercial al Virgin Australia Airlines Pty Ltd, este o companie aeriană cu sediul în Australia. Este cea mai mare companie aeriană după mărimea flotei care a folosit brandul Virgin. Compania și-a început activitatea la 31 august 2000 ca Virgin Blue, cu două aeronave pe o singură rută. Compania s-a descoperit brusc ca o companie aeriană majoră pe piața internă australiană după prăbușirea companiei Ansett Australia în septembrie 2001. Compania aeriană a crescut între timp, deservind direct 32 de orașe din Australia, de la noduri din Brisbane, Melbourne și Sydney.",
+    # "response": "Virgin Australia și-a început serviciul la 31 august 2000 ca Virgin Blue, cu două aeronave pe o singură rută.",
+    # "category": "closed_qa",
+    # "id": 0
+    
     dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=instructions))
-    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["instruction", "input", "id"], desc="Extract texts")
-    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc, remove_columns=["output", "prompt"], desc="Tokenize texts")
+    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["instruction", "context", "category", "id"], desc="Extract texts")
+    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc, remove_columns=["response", "prompt"], desc="Tokenize texts")
 
     if compute_stats == True:
         import numpy as np
@@ -147,4 +137,4 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
     tokenizer.add_special_tokens({"additional_special_tokens": ["[INST]", "[/INST]", "<<SYS>>\n", "\n<</SYS>>\n\n"]})
 
-    get_preprocessed_roalpaca_dataset(None, tokenizer, "full", compute_stats=True)
+    get_preprocessed_rodolly_dataset(None, tokenizer, "full", compute_stats=True)

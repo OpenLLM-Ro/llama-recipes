@@ -8,3 +8,8 @@ ft_datasets/grammar_dataset/*
 ft_datasets/graph_dataset/*
 ft_datasets/oasst1/*
 ft_datasets/scraped/*
+ft_datasets/ro_alpaca/*
+ft_datasets/ro_dolly/*
+ft_datasets/ro_norobots/*
+ft_datasets/ro_orca/*
+ft_datasets/ro_selfinstruct/*

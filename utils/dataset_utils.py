@@ -14,7 +14,9 @@ from ft_datasets import (
     get_graph_dataset,
     get_foundational_dataset,
     get_conversations_dataset,
-    get_roalpaca_dataset
+    get_roalpaca_dataset,
+    get_rosft_dataset
+    
 
 )
 from typing import Optional
@@ -29,7 +31,8 @@ DATASET_PREPROC = {
     "graph_dataset": get_graph_dataset,
     "foundational_dataset": get_foundational_dataset,
     "conversations_dataset": get_conversations_dataset,
-    "roalpaca_dataset": get_roalpaca_dataset
+    "roalpaca_dataset": get_roalpaca_dataset,
+    "rosft_dataset": get_rosft_dataset
 }
 
 
