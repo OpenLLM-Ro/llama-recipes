@@ -1,0 +1,275 @@
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este procedura dacă am lovit mașina altei persoane într-o parcare și nu am cum să contactez persoana vătămată? [/INST] Dacă ați lovit mașina unei alte persoane într-o parcare și nu puteți contacta persoana vătămată, trebuie să contactați poliția și să furnizați informații despre locul în care s-a produs accidentul. Poliția va investiga cazul și va lua măsurile necesare.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ În ce an s-a născut Messi? [/INST] Messi s-a născut în 1987.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Scrie o descriere despre România. [/INST] România este o țară situată în sud-estul Europei, cu o populație de aproximativ 19,5 milioane de locuitori. Este o țară în mare parte muntoasă, cu un relief divers, de la dealuri și păduri la munți înalți. Clima este temperată, cu veri calde și ierni reci. Limba oficială este româna, iar moneda este leul românesc. Economia este în mare parte bazată pe servicii și producție, cu o industrie puternică și o agricultură dezvoltată. România este o țară cu o istorie bogată, cu o cultură și o artă vibrante.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Am fost implicat într-un accident auto fară victime. Am și rca și casco, ce trebuie să completez? [/INST] Dacă ați fost implicat într-un accident auto fără victime, trebuie să completați un formular de accident auto (SR-22) și să furnizați o copie a poliței de asigurare auto (SR-22) la compania de asigurări.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ De ce echipament ai nevoie să faci scuba diving? [/INST] Pentru a face scufundări, aveți nevoie de un costum de scufundări, un set de scufundări, un regulator de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufundări, un set de scufund
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este rezultatul următorului calcul: 2x4 + 3? [/INST] Rezultatul este 10.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce jocuri de societate pot juca cu prietenii mei? [/INST] Există multe jocuri de societate pe care le puteți juca cu prietenii dvs., inclusiv Monopoly, Scrabble, Rummy, Uno, Șah, Go, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah, Șah
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este amenda pentru depășirea vitezei legale? [/INST] În general, amenda pentru depășirea vitezei legale este de 100 $ pentru prima încălcare și de 200 $ pentru a doua încălcare.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cine a scris poezia Floare albastra? [/INST] Poemul „Albă ca zăpada” a fost scris de William Shakespeare.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cine este președintele Franței? [/INST] Președintele Franței este Emmanuel Macron.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este cel mai înalt vârf muntos din România? [/INST] Cel mai înalt vârf muntos din România este Muntele Moldoveanu, situat în Munții Carpați, la granița dintre județele Harghita și Brașov.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Vreau să merg la mare. Ce stațiuni îmi recomanzi? [/INST] Stațiunile de pe plajă pe care le recomand sunt: 
+- South Beach, Miami, Florida 
+- Waikiki Beach, Honolulu, Hawaii 
+- Santa Monica Beach, Santa Monica, California 
+- Clearwater Beach, Clearwater, Florida 
+- Cocoa Beach, Cocoa Beach, Florida 
+- Daytona Beach, Daytona Beach, Florida 
+- Coronado Beach, Coronado, California 
+- Kailua Beach, Kailua, Hawaii 
+- Santa Barbara, Santa Barbara, California 
+- Newport Beach, Newport Beach, California 
+- Malibu Beach, Malibu, California 
+- Santa Cruz Beach, Santa Cruz, California 
+- San Diego Beach, San Diego, California 
+- San Francisco Beach, San Francisco, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Monica Beach, Santa Monica, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+- Santa Barbara Beach, Santa Barbara, California 
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cât durează zborul New York - Sydney? [/INST] Zborul de la New York la Sydney durează aproximativ 16 ore și 50 de minute.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Unde se varsă fluviul Dunărea? [/INST] Fluviul Dunărea se varsă în Marea Neagră.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce trebuie să fac în caz de accident auto? Care sunt primii pași? [/INST] Dacă sunteți implicat într-un accident auto, primii pași sunt să opriți mașina, să verificați dacă toată lumea este bine și să apelați poliția. Dacă este necesar, puteți oferi primul ajutor celor răniți. Asigurați-vă că luați numerele de înregistrare ale vehiculelor implicate și numerele de înregistrare ale celor implicate în accident. Dacă este posibil, faceți fotografii ale vehiculelor implicate și a locului accidentului.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Dă-mi două variante de mic dejun. [/INST] 1. Ovăz cu fructe proaspete 
+2. Ouă fierte tare cu avocado și roșii</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Câte județe are România? [/INST] România are 41 de județe.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cum se completează constatarea amiabilă în caz de accident? [/INST] O constatare amiabilă în caz de accident este un document care este semnat de ambele părți implicate într-un accident auto. Acest document este utilizat pentru a stabili responsabilitatea pentru accident și pentru a determina cine va plăti pentru daunele provocate. Documentul include informații precum numele părților implicate, locul accidentului, data și ora accidentului, descrierea daunelor și orice alte informații relevante.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care sunt vecinii României? [/INST] România are șapte vecini: Ungaria, Ucraina, Republica Moldova, Serbia, Bulgaria, Grecia și Turcia.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Scrie 3 cuvinte în română și 3 cuvinte în engleză. [/INST] Cuvinte în română: 
+Cuvinte în engleză:
+1. Bine 
+2. Bună 
+3. Bună</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cum se spune la copac în engleză? [/INST] Copacul se spune în engleză „tree”.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Aș dori sa încep sa fac astrofotografie ca hobby. De unde să încep? [/INST] Începeți prin a cumpăra un telescop și a învăța cum să-l utilizați. Există multe resurse online și cărți care vă pot ajuta să înțelegeți cum să utilizați un telescop și să obțineți imagini bune. De asemenea, puteți participa la ateliere sau seminarii pentru a învăța mai multe despre astrofotografie.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cât este salariul minim în România? [/INST] Salariul minim în România este de 2.300 de lei pe lună.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care sunt personajele principale din filmul Cars? [/INST] Personajele principale din filmul Cars sunt Lightning McQueen, Mater, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Ramone, Flo, Sally Carrera,
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Câte patrățele are o tablă de șah? [/INST] O tablă de șah are 64 de pătrate.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cam cât costă o Dacia Logan? [/INST] Prețul unei Dacia Logan variază în funcție de model și de opțiunile de echipare, dar în general costă între 10.000 și 15.000 de euro.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ De la ce varstă vorbesc copiii? [/INST] Copiii încep să vorbească în jurul vârstei de 1 an.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Au ajuns oameni pe lună? [/INST] Da, oamenii au ajuns pe Lună. Prima misiune a fost lansată în 1969 și a fost numită Apollo 11.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce este COVID-19? [/INST] COVID-19 este o boală infecțioasă cauzată de un virus numit SARS-CoV-2. Este cauzată de o infecție respiratorie și poate provoca simptome variind de la ușoare la severe, inclusiv febră, tuse, dificultăți de respirație și oboseală.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Pe ce fus orar se află Atena? [/INST] Atena este situată pe fusul orar UTC + 2.</s>
+==================================

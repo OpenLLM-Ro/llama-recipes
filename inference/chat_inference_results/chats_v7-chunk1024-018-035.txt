@@ -1,0 +1,261 @@
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este procedura dacă am lovit mașina altei persoane într-o parcare și nu am cum să contactez persoana vătămată? [/INST] Dacă ați lovit mașina altei persoane într-o parcare și nu aveți cum să contactați persoana vătămată, trebuie să urmați acești pași:
+
+1. Verificați dacă există daune: Inspectați mașina pentru a vedea dacă există daune. Asigurați-vă că verificați toate părțile caroseriei, inclusiv capota, aripile și ușile.
+
+2. Contactați poliția: Dacă există daune, trebuie să contactați imediat poliția. Ei vor lua declarații de la ambele părți și vor stabili cine este vinovatul.
+
+3. Obțineți o estimare de reparații: Odată ce poliția a terminat, puteți obține o estimare de reparații de la un mecanic. Asigurați-vă că furnizați toate informațiile necesare, inclusiv marca, modelul și anul mașinii, precum și orice informații despre daune.
+
+4. Comunicați cu asigurarea: Dacă aveți asigurare, trebuie să comunicați cu compania dvs. de asigurări. Ei vor gestiona procesul de despăgubire și vor plăti pentru orice reparații necesare.
+
+5. Comunicați cu persoana vătămată: Dacă persoana vătămată este de acord, puteți comunica cu ei pentru a ajunge la o înțelegere. Acest lucru poate implica plata unei sume de bani pentru a acoperi orice daune sau reparații.
+
+6. Fiți răbdători: Procesul de despăgubire poate dura ceva timp, deci fiți răbdători și urmați pașii de mai sus.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ În ce an s-a născut Messi? [/INST] Messi s-a născut în 1987.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Scrie o descriere despre România. [/INST] România este o țară situată în Europa de Est, cu o istorie bogată și o cultură diversă. Este cunoscută pentru peisajele sale uimitoare, de la munți acoperiți de zăpadă la câmpii verzi luxuriante, precum și pentru orașele sale vibrante, cu o istorie bogată și o cultură diversă. Bucătăria românească este renumită pentru mâncărurile sale tradiționale, cum ar fi mămăliga, sarmalele și plăcintele. România este, de asemenea, casa unor repere istorice și culturale, cum ar fi Castelul Peleș, Palatul Parlamentului și Biserica Neagră.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Am fost implicat într-un accident auto fară victime. Am și rca și casco, ce trebuie să completez? [/INST] Dacă ați fost implicat într-un accident auto fără victime, trebuie să completați un formular de accident auto. Acest formular este necesar pentru a raporta accidentul asigurătorului dvs. de rca și casco. În plus, trebuie să furnizați asigurătorului dvs. toate informațiile necesare, cum ar fi numărul de înmatriculare al vehiculului implicat, data și ora accidentului, locația accidentului și orice alte informații relevante.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ De ce echipament ai nevoie să faci scuba diving? [/INST] Pentru a face scuba diving, veți avea nevoie de un costum de baie, un cască, un regulator, un set de tuburi, un computer, un set de mănuși, un set de pantofi, un set de ochelari de protecție, un set de cizme de scufundare, un set de greutăți, un set de echipamente de siguranță, un set de echipamente de comunicare și un set de echipamente de vizualizare.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este rezultatul următorului calcul: 2x4 + 3? [/INST] Rezultatul calculului 2x4 + 3 este 7.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce jocuri de societate pot juca cu prietenii mei? [/INST] Există multe jocuri de societate care pot fi jucate cu prietenii tăi. Unele dintre cele mai populare jocuri de masă includ Monopoly, Scrabble, șah, și Clue.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este amenda pentru depășirea vitezei legale? [/INST] Amenda pentru depășirea vitezei legale variază în funcție de țară și de jurisdicție. În Statele Unite, amenzile pentru depășirea vitezei legale pot varia de la câteva sute de dolari la câteva mii de dolari, în funcție de stat și de viteza cu care a fost depășită limita de viteză. În plus, punctele de penalizare pot fi aplicate, iar permisul de conducere poate fi suspendat sau chiar anulat.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cine a scris poezia Floare albastra? [/INST] Poemul „Floarea albastră” a fost scris de William Wordsworth.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cine este președintele Franței? [/INST] Începând din 2021, președintele Franței este Emmanuel Macron.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este cel mai înalt vârf muntos din România? [/INST] Cel mai înalt vârf muntos din România este Vârful Moldoveanu, care se află la o altitudine de 2.544 de metri.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Vreau să merg la mare. Ce stațiuni îmi recomanzi? [/INST] Există multe stațiuni minunate de-a lungul coastei din Florida. Iată câteva stațiuni populare:
+
+- Miami Beach: Miami Beach este o stațiune populară de pe coasta de sud a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Fort Lauderdale: Fort Lauderdale este o stațiune de pe coasta de sud-est a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Key West: Key West este o stațiune de pe coasta de sud-vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Orlando: Orlando este o stațiune de pe coasta de est a Floridei. Este cunoscut pentru parcurile sale tematice, cum ar fi Walt Disney World, Universal Studios și SeaWorld.
+
+- Tampa: Tampa este o stațiune de pe coasta de vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Panama City Beach: Panama City Beach este o stațiune de pe coasta de nord-vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Daytona Beach: Daytona Beach este o stațiune de pe coasta de est a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Sarasota: Sarasota este o stațiune de pe coasta de vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Clearwater: Clearwater este o stațiune de pe coasta de vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Destin: Destin este o stațiune de pe coasta de sud-est a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Pensacola Beach: Pensacola Beach este o stațiune de pe coasta de vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- West Palm Beach: West Palm Beach este o stațiune de pe coasta de sud a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Fort Myers: Fort Myers este o stațiune de pe coasta de sud-vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Jacksonville Beach: Jacksonville Beach este o stațiune de pe coasta de nord-est a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Sarasota: Sarasota este o stațiune de pe coasta de vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Key Largo: Key Largo este o stațiune de pe coasta de sud-est a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Key West: Key West este o stațiune de pe coasta de sud-vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Tampa: Tampa este o stațiune de pe coasta de vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+
+- Panama City Beach: Panama City Beach este o stațiune de pe coasta de nord-vest a Floridei. Este cunoscut pentru plajele sale frumoase, restaurantele și viața de noapte.
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cât durează zborul New York - Sydney? [/INST] Un zbor direct de la New York la Sydney durează aproximativ 14 ore și 45 de minute.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Unde se varsă fluviul Dunărea? [/INST] Fluviul Dunărea se varsă în Marea Neagră.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce trebuie să fac în caz de accident auto? Care sunt primii pași? [/INST] Dacă sunteți implicat într-un accident auto, este important să rămâneți calm și să urmați acești pași:
+
+1. Opriți motorul și scoateți cheia din contact.
+2. Verificați dacă există victime sau dacă există persoane rănite. Dacă există, apelați imediat serviciile de urgență.
+3. Dacă este posibil, mutați mașina de pe drum, dacă este necesar.
+4. Contactați poliția prin apelarea 911 sau prin contactarea directă a departamentului de poliție local.
+5. Colectați informații importante, cum ar fi numărul de înmatriculare al vehiculului, numărul de asigurare și numele companiei de asigurare a vehiculului implicat.
+6. Dacă este posibil, faceți fotografii ale vehiculelor implicate, ale locului accidentului și ale oricăror dovezi relevante.
+7. Păstrați o atitudine calmă și cooperantă cu ofițerii de poliție și cu reprezentanții companiei de asigurări.
+8. Fiți pregătiți să oferiți detalii despre accident, inclusiv când și unde s-a întâmplat, cine se afla în vehicule și ce cauza accidentul.
+9. Dacă este posibil, păstrați o copie a raportului de accident și a oricăror documente relevante.
+10. Dacă este necesar, solicitați asistență medicală sau transport la cel mai apropiat spital.
+
+Este important să rețineți că fiecare stat are propriile sale reguli și proceduri pentru raportarea accidentelor, așa că este o idee bună să verificați legile locale.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Dă-mi două variante de mic dejun. [/INST] 1. Iaurt grecesc cu fructe de padure si granola
+2. Pâine prăjită cu avocado cu ouă fierte</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Câte județe are România? [/INST] România are 41 de județe.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cum se completează constatarea amiabilă în caz de accident? [/INST] O constatare amiabilă de accident este un proces prin care părțile implicate într-un accident auto pot conveni asupra responsabilității și despăgubirilor fără a fi nevoite să meargă la instanță. Iată pașii pentru a completa o constatare amiabilă de accident:
+
+1. Opriți imediat mașina: În cazul unui accident, este important să opriți imediat mașina și să stați în locul accidentului. Asigurați-vă că mașina este în siguranță și nu reprezintă o amenințare pentru alte vehicule.
+
+2. Verificați dacă toată lumea este în siguranță: Asigurați-vă că toată lumea implicată în accident este în siguranță și nu există răniți. Dacă este necesar, apelați serviciile de urgență.
+
+3. Colectați informații de bază: Colectați informații de bază de la ceilalți șoferi implicați, cum ar fi numele, adresa, numărul de telefon, compania de asigurare și numărul de înmatriculare al vehiculului.
+
+4. Completați formularul de constatare amiabilă de accident: Majoritatea statelor au un formular de constatare amiabilă de accident pe care trebuie să-l completați. Acest formular va solicita informații despre accident, inclusiv data, ora, locul și cauza accidentului.
+
+5. Discuții cu ceilalți șoferi: Încercați să discutați cu ceilalți șoferi implicați și să ajungeți la o înțelegere cu privire la responsabilitate și despăgubiri. Este important să fiți sinceri și deschiși în timpul acestor discuții.
+
+6. Înregistrați orice înțelegere: Dacă ați ajuns la o înțelegere cu ceilalți șoferi, asigurați-vă că înregistrați orice acorduri scrise. Acest lucru poate fi util dacă apar ulterior probleme sau dacă unul dintre șoferi nu este de acord cu înțelegerea.
+
+7. Contactați compania dvs. de asigurări: În cele din urmă, contactați compania dvs. de asigurări și raportați accidentul. Asigurați-vă că furnizați toate informațiile necesare și urmați instrucțiunile lor.
+
+După finalizarea constatării amiabile de accident, este important să păstrați o copie a formularului și a oricăror înțelegeri scrise. Dacă nu puteți ajunge la o înțelegere cu ceilalți șoferi, va trebui să mergeți la instanță pentru a rezolva problema.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care sunt vecinii României? [/INST] România are granițe comune cu șase țări: Ungaria la nord-vest, Serbia la sud, Ucraina la nord-est, Republica Moldova la est, Bulgaria la sud-est și Muntenegru la sud-vest.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Scrie 3 cuvinte în română și 3 cuvinte în engleză. [/INST] Română: 1. Buna 2. Bună 3. Bună
+Engleză: 1. Bună 2. Bună 3. Bună</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cum se spune la copac în engleză? [/INST] Copacul se numește „tree” în engleză.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Aș dori sa încep sa fac astrofotografie ca hobby. De unde să încep? [/INST] Pentru a începe să faceți astrofotografie ca hobby, trebuie să aveți un telescop, un trepied și o cameră. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bună înțelegere a fotografiei și a astronomiei. În plus, trebuie să aveți o bun
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cât este salariul minim în România? [/INST] Începând din 2021, salariul minim în România este de 2.300 de lei pe lună.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care sunt personajele principale din filmul Cars? [/INST] Personajele principale din filmul Cars sunt Lightning McQueen, Sally Carrera, Doc Hudson, Mater, Guido, Francesco, Luigi, Sarge, Sheriff, și Fillmore.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Câte patrățele are o tablă de șah? [/INST] O tablă de șah are 64 de pătrate.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cam cât costă o Dacia Logan? [/INST] Prețul unei Dacia Logan variază în funcție de modelul și anul de fabricație. În medie, un Logan nou costă între 10.000 și 15.000 de euro.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ De la ce varstă vorbesc copiii? [/INST] De obicei, copiii încep să vorbească în jurul vârstei de 12 luni.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Au ajuns oameni pe lună? [/INST] Da, oamenii au ajuns pe lună. Prima misiune de succes a fost Apollo 11, care a avut loc pe 20 iulie 1969. Echipajul misiunii a fost format din astronauții Neil Armstrong, Edwin „Buzz” Aldrin și Michael Collins.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce este COVID-19? [/INST] COVID-19 este un virus care a apărut în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2019. Virusul a fost identificat pentru prima dată în Wuhan, China, în decembrie 2
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Pe ce fus orar se află Atena? [/INST] Atena este situată pe fusul orar de est al Europei.</s>
+==================================

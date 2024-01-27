@@ -1,0 +1,189 @@
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este procedura dacă am lovit mașina altei persoane într-o parcare și nu am cum să contactez persoana vătămată? [/INST] Dacă ați lovit mașina altei persoane într-o parcare și nu puteți contacta persoana vătămată, trebuie să contactați poliția și să furnizați informații despre locul și data accidentului. Poliția va investiga incidentul și va lua măsurile necesare.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ În ce an s-a născut Messi? [/INST] Messi s-a născut în 1987.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Scrie o descriere despre România. [/INST] România este o țară mare situată în Europa de Sud-Est. Este a șaptea țară ca mărime din Uniunea Europeană și este a șaptea țară ca mărime din Europa. România este o țară diversă, cu o gamă largă de peisaje, culturi și activități. Este o țară în creștere, cu o economie în creștere și o populație tânără. România este o țară în continuă dezvoltare, cu o istorie bogată și o cultură vibrantă.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Am fost implicat într-un accident auto fară victime. Am și rca și casco, ce trebuie să completez? [/INST] Dacă ați fost implicat într-un accident auto fără victime, trebuie să completați un formular de accident auto. Acest formular trebuie completat de ambele părți implicate în accident și trebuie trimis la asigurătorul dvs. de răspundere civilă auto (RCA) și la asigurătorul dvs. de asigurare auto (CASCO). Asigurătorul dvs. RCA va plăti orice daune cauzate de accident, iar asigurătorul dvs. CASCO va plăti orice daune cauzate de accident mașinii dvs.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ De ce echipament ai nevoie să faci scuba diving? [/INST] Pentru a face scufundări, aveți nevoie de un costum de scufundări, un regulator de respirație, un set de bule, un cască, un lumină de căutare, un cronometru, un compas, un marker de adâncime, un dispozitiv de urmărire a adâncimii, un dispozitiv de urmărire a timpului, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a adâncimii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a adâncimii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmărire a temperaturii, un dispozitiv de urmări
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este rezultatul următorului calcul: 2x4 + 3? [/INST] Rezultatul este 10.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce jocuri de societate pot juca cu prietenii mei? [/INST] Există multe jocuri de societate care pot fi jucate cu prietenii. Unele dintre cele mai populare includ Monopoly, Scrabble, Risk, Cluedo, Trivial Pursuit, Catan, Settlers of Catan, Carcassonne, Pandemic, 7 Wonders, Sagrada, Dominion, Agricola, Sushi Go, Splendor, Forbidden Island, Machi Koro, Azul, Ticket to Ride, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan, Settlers of Catan
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este amenda pentru depășirea vitezei legale? [/INST] Pedeapsa pentru depășirea vitezei legale depinde de statul în care se află șoferul. În general, amenzile pentru depășirea vitezei legale variază de la stat la stat, dar pot fi de până la 1000 de dolari. În plus, șoferii pot fi supuși și unor alte sancțiuni, cum ar fi suspendarea permisului de conducere, puncte de penalizare sau chiar închisoare.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cine a scris poezia Floare albastra? [/INST] Poemul „Floarea albastră” a fost scris de T.S. Eliot.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cine este președintele Franței? [/INST] Președintele Franței este Emmanuel Macron.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care este cel mai înalt vârf muntos din România? [/INST] Cel mai înalt vârf muntos din România este Muntele Moldoveanu, situat în Munții Carpați, la granița dintre județele Harghita și Covasna.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Vreau să merg la mare. Ce stațiuni îmi recomanzi? [/INST] Dacă doriți să mergeți la plajă, vă recomandăm să vizitați stațiunile de pe litoralul Atlanticului, cum ar fi Myrtle Beach, Carolina de Sud, sau Daytona Beach, Florida.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cât durează zborul New York - Sydney? [/INST] Zborul de la New York la Sydney durează aproximativ 15 ore.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Unde se varsă fluviul Dunărea? [/INST] Fluviul Dunărea se varsă în Marea Neagră.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce trebuie să fac în caz de accident auto? Care sunt primii pași? [/INST] Dacă sunteți implicat într-un accident auto, primul pas este să opriți mașina și să vă asigurați că toate persoanele implicate sunt în siguranță. Dacă este posibil, utilizați centura de siguranță și asigurați-vă că toate ușile sunt închise. Dacă este necesar, apelați la 911 și furnizați orice informații relevante, cum ar fi numărul de înmatriculare al vehiculului, numele și adresa proprietarului vehiculului și orice alte informații relevante. Asigurați-vă că luați numerele de înmatriculare ale vehiculului care a provocat accidentul și ale oricăror vehicule implicate. Dacă este necesar, solicitați ajutor medical pentru orice persoane rănite.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Dă-mi două variante de mic dejun. [/INST] 1. Ovăz cu fructe de padure și nuci
+2. Ouă fierte tare cu avocado și roșii cherry</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Câte județe are România? [/INST] România are 41 de județe.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cum se completează constatarea amiabilă în caz de accident? [/INST] O constatare amiabilă în caz de accident este un document care este semnat de ambele părți implicate într-un accident auto. Acesta este utilizat pentru a stabili responsabilitatea pentru accident și pentru a determina daunele care trebuie plătite. Documentul include informații precum numele și adresa părților implicate, data și ora accidentului, descrierea accidentului, cauza accidentului și orice daune materiale sau fizice.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care sunt vecinii României? [/INST] România are vecinii Republica Moldova la est, Ucraina la nord, Ungaria la vest, Serbia la sud-vest și Bulgaria la sud.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Scrie 3 cuvinte în română și 3 cuvinte în engleză. [/INST] Cuvinte în română: 
+- Cățeluș
+- Cățeluș
+- Cățeluș
+
+Cuvinte în engleză:
+- Pup
+- Pup
+- Pup</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cum se spune la copac în engleză? [/INST] Copacul se spune în engleză „tree”.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Aș dori sa încep sa fac astrofotografie ca hobby. De unde să încep? [/INST] Pentru a începe să faceți astrofotografie ca hobby, cel mai bun loc de pornire este să cumpărați un telescop și să începeți să vă familiarizați cu cerul nopții. De asemenea, puteți începe să vă familiarizați cu software-ul de astrofotografie și să începeți să vă familiarizați cu tehnicile de fotografiere a cerului nopții. În plus, puteți începe să vă familiarizați cu diferitele tipuri de camere și obiective disponibile și să începeți să vă construiți propria dvs. echipă de astrofotografie.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cât este salariul minim în România? [/INST] Salariul minim în România este de 2.230 de lei pe lună (echivalentul a 475 de euro).</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Care sunt personajele principale din filmul Cars? [/INST] Personajele principale din filmul Cars sunt Lightning McQueen, Mater, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson, Guido, Luigi, Fillmore, Sarge, Flo, Sally, Doc Hudson
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Câte patrățele are o tablă de șah? [/INST] O tablă de șah are 64 de pătrate.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Cam cât costă o Dacia Logan? [/INST] Prețul unei Dacia Logan variază în funcție de model și de opțiunile de echipare, dar în general costă între 8.000 și 15.000 de euro.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ De la ce varstă vorbesc copiii? [/INST] Copiii încep să vorbească în jurul vârstei de 1 an.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Au ajuns oameni pe lună? [/INST] Da, oamenii au ajuns pe Lună. Prima misiune de succes a fost Apollo 11, care a fost lansată în 1969 și a aterizat pe Lună în 1969.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Ce este COVID-19? [/INST] COVID-19 este o boală infecțioasă cauzată de virusul SARS-CoV-2. Aceasta a fost identificată pentru prima dată în decembrie 2019 în Wuhan, China și a fost declarată pandemie de Organizația Mondială a Sănătății în martie 2020. COVID-19 poate provoca o varietate de simptome, de la simptome ușoare la forme severe, inclusiv febră, tuse, dificultăți de respirație și oboseală.</s>
+==================================
+<s> [INST] <<SYS>>
+ Ești un asistent folositor, respectuos și onest. Încearcă să ajuți cât mai mult prin informațiile oferite, excluzând răspunsuri toxice, rasiste, sexiste, periculoase și ilegale. 
+<</SYS>>
+
+ Pe ce fus orar se află Atena? [/INST] Atena este situată pe fusul orar UTC + 2.</s>
+==================================
