@@ -3,11 +3,11 @@
 
 from peft import PeftModel
 from transformers import LlamaForCausalLM, LlamaConfig
-from transformers import AutoTokenizer, AutoModelForCausalLM
+# from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # Function to load the main model for text generation
 def load_model(model_name, quantization):
-    model = AutoModelForCausalLM.from_pretrained(
+    model = LlamaForCausalLM.from_pretrained(
         model_name,
         return_dict=True,
         load_in_8bit=quantization,
