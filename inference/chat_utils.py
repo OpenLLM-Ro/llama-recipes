@@ -35,7 +35,7 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model):
     print(model_name)
     if "v1" in model_name:
         prompt = DEFAULT_SYSTEM_PROMPT_ENGLISH
-    elif "v2" in model_name or "v4" in model_name or "v5" in model_name or "v6" in model_name:
+    elif "v2" in model_name or "v4" in model_name or "v5" in model_name or "v6" in model_name or "v7" in model_name:
         if "-chat" in model_name:
             prompt = DEFAULT_SYSTEM_PROMPT_RO
         elif "-full" in model_name:
