@@ -13,3 +13,4 @@ ft_datasets/ro_dolly/*
 ft_datasets/ro_norobots/*
 ft_datasets/ro_orca/*
 ft_datasets/ro_selfinstruct/*
+inference/texts_chats
