@@ -11,6 +11,8 @@ from typing import List
 
 from peft import PeftModel, PeftConfig
 from transformers import LlamaConfig, LlamaTokenizer, LlamaForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
 from safety_utils import get_safety_checker
 from model_utils import load_model, load_peft_model
 from chat_utils import read_dialogs_from_file, format_tokens
@@ -59,7 +61,7 @@ def main(
     if peft_model:
         print("LOADING PEFT MODEL", flush=True)
         model = load_peft_model(model, peft_model)
-    tokenizer = LlamaTokenizer.from_pretrained(model_name, use_auth_token="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", legacy=False)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token="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", legacy=False)
     print(len(tokenizer))
     print("Pad token id:", tokenizer.pad_token_id)
     model.config.pad_token_id = tokenizer.pad_token_id
