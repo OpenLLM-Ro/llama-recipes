@@ -447,9 +447,9 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
             nconv = ensure_conv_format(conv, max_words, tokenizer, prompt_enc)
             # print(i, len(nconv))#, tokenizer.decode(nconv))
             extended[i] = nconv
-        del sample
-        del full_enc
-        del full_doc_enc
+        # del sample
+        # del full_enc
+        # del full_doc_enc
         chunks = extended
         hf_dict_chunks = {}
         for chunk_id, chunk in enumerate(chunks):
@@ -463,7 +463,7 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
                 hf_dict_chunks["attention_mask"].append([1] * len(hf_dict_chunks["input_ids"][chunk_id]))
                 hf_dict_chunks["labels"].append(copy.deepcopy(hf_dict_chunks["input_ids"][chunk_id]))
                 hf_dict_chunks["labels"][chunk_id][:len(prompt_enc)] = [-100] * len(prompt_enc)
-        del chunks
+        # del chunks
         return {"hf_dict_chunks": hf_dict_chunks}
     
     def flatten_chunks(data):
@@ -526,16 +526,16 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
     # print(dataset)
     get_sources_stats(list(map(lambda x: x["source"], dataset)), "After filtering short conversations")
 
-    dataset = dataset.map(lambda conv: process_conv(conv, PROMPT), num_proc=nproc, desc="Preprocess & format conversation")  
-    dataset = dataset.remove_columns(["order"])
+    dataset = dataset.map(lambda conv: process_conv(conv, PROMPT), remove_columns=["order"], num_proc=nproc, desc="Preprocess & format conversation")  
+    # dataset = dataset.remove_columns(["order"])
     # print(dataset)
     # get prompt here
     prompt = dataset[0]["conv"].split("\n<</SYS>>\n\n")[0] + "\n<</SYS>>\n\n"
     prompt_enc = tokenizer.encode(prompt)
     prompt_enc_size = len(prompt_enc)
 
-    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, batched=True, desc="Tokenize texts")
-    dataset = dataset.remove_columns(["conv", "attention_mask"])
+    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, remove_columns=["conv"], batched=True, desc="Tokenize texts", keep_in_memory=False, cache_file_name="test_tmp/tmp1.cache")
+    # dataset = dataset.remove_columns(["conv", "attention_mask"])
     # print(dataset)
     if compute_stats == True:
         import numpy as np
@@ -547,13 +547,14 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
         print("########################################################################################")
         print()
 
-    dataset = dataset.map(lambda sample: prepare_input(sample, prompt_enc, tokenizer, max_words), num_proc=nproc, remove_columns=["input_ids"], desc="Build chunks of size {0}".format(max_words))
+    dataset = dataset.map(lambda sample: prepare_input(sample, prompt_enc, tokenizer, max_words), remove_columns=["input_ids", "attention_mask"], num_proc=nproc, desc="Build chunks of size {0}".format(max_words), keep_in_memory=False, cache_file_name="test_tmp/tmp2.cache")
+    # dataset = dataset.remove_columns(["input_ids"])
     # print(dataset)
     dataset = dataset.shuffle(seed=42)
-    columns_to_remove = dataset.column_names + ["hf_dict_chunks"]
-    dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, remove_columns=columns_to_remove, desc="Flatten chunks")#, keep_in_memory=False, cache_file_name="tmp.cache")
+    columns_to_remove = dataset.column_names# + ["hf_dict_chunks"]
+    dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, remove_columns=columns_to_remove, desc="Flatten chunks", keep_in_memory=False, cache_file_name="test_tmp/tmp3.cache")
     # dataset = dataset.remove_columns(columns_to_remove)
-    # print(dataset)
+    print(dataset)
     # dataset = dataset.select_columns(["hf_dict_chunks", "source"])
     # dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, desc="Flatten chunks")
     get_sources_stats(list(map(lambda x: x["sources"], dataset)), "After building conversation chunks")
