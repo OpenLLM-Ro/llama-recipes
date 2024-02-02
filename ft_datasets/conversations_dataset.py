@@ -534,7 +534,7 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
     prompt_enc = tokenizer.encode(prompt)
     prompt_enc_size = len(prompt_enc)
 
-    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, remove_columns=["conv"], batched=True, desc="Tokenize texts", keep_in_memory=False, cache_file_name="test_tmp/tmp1.cache")
+    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, remove_columns=["conv"], batched=True, desc="Tokenize texts", keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-1.cache".format(split))
     # dataset = dataset.remove_columns(["conv", "attention_mask"])
     # print(dataset)
     if compute_stats == True:
@@ -547,14 +547,14 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
         print("########################################################################################")
         print()
 
-    dataset = dataset.map(lambda sample: prepare_input(sample, prompt_enc, tokenizer, max_words), remove_columns=["input_ids", "attention_mask"], num_proc=nproc, desc="Build chunks of size {0}".format(max_words), keep_in_memory=False, cache_file_name="test_tmp/tmp2.cache")
+    dataset = dataset.map(lambda sample: prepare_input(sample, prompt_enc, tokenizer, max_words), remove_columns=["input_ids", "attention_mask"], num_proc=nproc, desc="Build chunks of size {0}".format(max_words), keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-2.cache".format(split))
     # dataset = dataset.remove_columns(["input_ids"])
     # print(dataset)
     dataset = dataset.shuffle(seed=42)
     columns_to_remove = dataset.column_names# + ["hf_dict_chunks"]
-    dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, remove_columns=columns_to_remove, desc="Flatten chunks", keep_in_memory=False, cache_file_name="test_tmp/tmp3.cache")
+    dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, remove_columns=columns_to_remove, desc="Flatten chunks", keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-3.cache".format(split))
     # dataset = dataset.remove_columns(columns_to_remove)
-    print(dataset)
+    # print(dataset)
     # dataset = dataset.select_columns(["hf_dict_chunks", "source"])
     # dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, desc="Flatten chunks")
     get_sources_stats(list(map(lambda x: x["sources"], dataset)), "After building conversation chunks")
@@ -570,4 +570,5 @@ if __name__ == "__main__":
     tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
     tokenizer.add_special_tokens({"additional_special_tokens": ["[INST]", "[/INST]", "<<SYS>>\n", "\n<</SYS>>\n\n"]})
     get_preprocessed_conversations_dataset(None, tokenizer, "train+dev")
+    get_preprocessed_conversations_dataset(None, tokenizer, "test")
     
