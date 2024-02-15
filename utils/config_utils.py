@@ -12,6 +12,7 @@ from peft import (
 import configs.datasets as datasets
 from configs import lora_config, llama_adapter_config, prefix_config, train_config
 from .dataset_utils import DATASET_PREPROC
+from dataclasses import asdict
 
 
 def update_config(config, **kwargs):
@@ -38,15 +39,16 @@ def update_config(config, **kwargs):
 def generate_peft_config(train_config, kwargs):
     configs = (lora_config, llama_adapter_config, prefix_config)
     peft_configs = (LoraConfig, AdaptionPromptConfig, PrefixTuningConfig)
+    
     names = tuple(c.__name__.rstrip("_config") for c in configs)
     
     assert train_config.peft_method in names, f"Peft config not found: {train_config.peft_method}"
     
-    config = configs[names.index(train_config.peft_method)]
+    config = configs[names.index(train_config.peft_method)]()
+
     update_config(config, **kwargs)
-    params = {k.name: getattr(config, k.name) for k in fields(config)}
+    params = asdict(config)
     peft_config = peft_configs[names.index(train_config.peft_method)](**params)
-    
     return peft_config
 
 
@@ -59,3 +61,4 @@ def generate_dataset_config(train_config, kwargs):
     update_config(dataset_config, **kwargs)
     
     return  dataset_config
+    
