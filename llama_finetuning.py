@@ -150,7 +150,7 @@ def main(**kwargs):
 
 
     print_model_size(model, train_config, rank if train_config.enable_fsdp else 0)
-    
+
     # Prepare the model for int8 training if quantization is enabled
     if train_config.quantization:
         model = prepare_model_for_int8_training(model)
@@ -180,12 +180,11 @@ def main(**kwargs):
     # save tokenizer
     tokenizer.save_pretrained(train_config.dist_checkpoint_root_folder+"/tokenizer")
 
-
     if train_config.use_peft:
         peft_config = generate_peft_config(train_config, kwargs)
+        print(peft_config)        
         model = get_peft_model(model, peft_config)
         model.print_trainable_parameters()
-    
 
     #setting up FSDP if enable_fsdp is enabled
     if train_config.enable_fsdp:
