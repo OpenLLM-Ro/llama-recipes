@@ -63,7 +63,6 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model, prompt_type=None):
     
     print("Model name: {0} | Peft model: {2} | Prompt: {1}".format(model_name, prompt[:30], peft_model))
     prompt_tokens = []
-    printed_first = False
     for dialog in dialogs:
 
         if prompt == DEFAULT_SYSTEM_PROMPT_NONE:
@@ -71,9 +70,6 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model, prompt_type=None):
             dialog_text = "".join(dialog_text)
             dialog_tokens = tokenizer.encode(dialog_text) 
             prompt_tokens.append(dialog_tokens)
-            if printed_first == False:
-                print(dialog_text)
-                printed_first = True
             continue
 
         if dialog[0]["role"] != "system":
@@ -94,10 +90,6 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model, prompt_type=None):
                 + dialog[1]["content"],
             }
         ] + dialog[2:]
-        
-        if printed_first == False:
-            print(dialog)
-            printed_first = True
         
         
         assert all([msg["role"] == "user" for msg in dialog[::2]]) and all(
