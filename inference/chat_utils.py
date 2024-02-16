@@ -31,26 +31,39 @@ DEFAULT_SYSTEM_PROMPT_NONE = ""
 
 DEFAULT_SYSTEM_PROMPT = DEFAULT_SYSTEM_PROMPT_RO
 
-def format_tokens(dialogs, tokenizer, model_name, peft_model):
+def format_tokens(dialogs, tokenizer, model_name, peft_model, prompt_type=None):
     print(model_name)
-    if "v1" in model_name:
-        prompt = DEFAULT_SYSTEM_PROMPT_ENGLISH
-    elif "v2" in model_name or "v4" in model_name or "v5" in model_name or "v6" in model_name or "v7" in model_name:
-        if "-chat" in model_name:
-            prompt = DEFAULT_SYSTEM_PROMPT_RO
-        elif "-full" in model_name:
+    if prompt_type == None:
+        print("No prompt type selected! Exiting now")
+            
+        if "v1" in model_name:
+            prompt = DEFAULT_SYSTEM_PROMPT_ENGLISH
+        elif "v2" in model_name or "v4" in model_name or "v5" in model_name or "v6" in model_name or "v7" in model_name:
+            if "-chat" in model_name:
+                prompt = DEFAULT_SYSTEM_PROMPT_RO
+            elif "-full" in model_name:
+                prompt = DEFAULT_SYSTEM_PROMPT_NONE
+        elif "v3" in model_name:
             prompt = DEFAULT_SYSTEM_PROMPT_NONE
-    elif "v3" in model_name:
+        elif "ndrei481" in model_name :
+            prompt = DEFAULT_SYSTEM_PROMPT_NONE
+        elif peft_model != None and "denis" in peft_model:
+            prompt = DEFAULT_SYSTEM_PROMPT_NONE
+        else:
+            # this is for raw llama maybe
+            prompt = DEFAULT_SYSTEM_PROMPT_RO
+        print("Automatically selected ({0}).".format(prompt[:30]))
+
+        sys.exit()
+    elif prompt_type == "foundational":
         prompt = DEFAULT_SYSTEM_PROMPT_NONE
-    elif "ndrei481" in model_name :
-        prompt = DEFAULT_SYSTEM_PROMPT_NONE
-    elif peft_model != None and "denis" in peft_model:
-        prompt = DEFAULT_SYSTEM_PROMPT_NONE
-    else:
-        # this is for raw llama maybe
+    
+    elif prompt_type == "chat":
         prompt = DEFAULT_SYSTEM_PROMPT_RO
+    
     print("Model name: {0} | Peft model: {2} | Prompt: {1}".format(model_name, prompt[:30], peft_model))
     prompt_tokens = []
+    printed_first = False
     for dialog in dialogs:
 
         if prompt == DEFAULT_SYSTEM_PROMPT_NONE:
@@ -58,7 +71,11 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model):
             dialog_text = "".join(dialog_text)
             dialog_tokens = tokenizer.encode(dialog_text) 
             prompt_tokens.append(dialog_tokens)
+            if printed_first == False:
+                print(dialog_text)
+                printed_first = True
             continue
+
         if dialog[0]["role"] != "system":
                 dialog = [
                     {
@@ -77,8 +94,12 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model):
                 + dialog[1]["content"],
             }
         ] + dialog[2:]
-        #print(dialog)
-        #sys.exit()
+        
+        if printed_first == False:
+            print(dialog)
+            printed_first = True
+        
+        
         assert all([msg["role"] == "user" for msg in dialog[::2]]) and all(
             [msg["role"] == "assistant" for msg in dialog[1::2]]
         ), (

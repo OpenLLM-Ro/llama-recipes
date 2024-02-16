@@ -21,6 +21,7 @@ def main(
     model_name,
     peft_model: str=None,
     quantization: bool=False,
+    prompt_type: str=None,
     max_new_tokens = 1024, #The maximum numbers of tokens to generate
     min_new_tokens:int=0, #The minimum numbers of tokens to generate
     prompt_file: str=None,
@@ -79,7 +80,7 @@ def main(
     # model.resize_token_embeddings(len(tokenizer))
     # sys.exit()
 
-    chats = format_tokens(dialogs, tokenizer, model_name, peft_model)
+    chats = format_tokens(dialogs, tokenizer, model_name, peft_model, prompt_type)
     print("Dialogs formatted.", flush=True)
     # print(chats[0])
     # sys.exit()
