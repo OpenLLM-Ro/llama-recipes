@@ -62,7 +62,7 @@ def main(
     if peft_model:
         print("LOADING PEFT MODEL", flush=True)
         model = load_peft_model(model, peft_model)
-    if os.path.exists(os.path.join(peft_model, "tokenizer")):
+    if peft_model and os.path.exists(os.path.join(peft_model, "tokenizer")):
         print("Loading tokenizer from peft model: {0}".format(peft_model), flush=True)
         tokenizer = LlamaTokenizer.from_pretrained(os.path.join(peft_model, "tokenizer"), use_auth_token="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", legacy=False)
     else:
