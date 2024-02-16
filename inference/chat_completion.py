@@ -107,7 +107,7 @@ def main(
             #     length_penalty=length_penalty,
             #     **kwargs
             # )
-            outputs = model.generate(input_ids=tokens, max_new_tokens=max_new_tokens, do_sample=do_sample)
+            outputs = model.generate(input_ids=tokens, max_new_tokens=max_new_tokens, do_sample=do_sample, pad_token_id=tokenizer.pad_token_id)
 
             output_text = tokenizer.decode(outputs[0], skip_special_tokens=False)
             print(f"Model output:\n{output_text}")
