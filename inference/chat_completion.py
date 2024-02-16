@@ -66,7 +66,7 @@ def main(
         print("Loading tokenizer from peft model: {0}".format(peft_model), flush=True)
         tokenizer = LlamaTokenizer.from_pretrained(os.path.join(peft_model, "tokenizer"), use_auth_token="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", legacy=False)
     else:
-        print("Loading tokenizer from base model: {1}".format(model_name), flush=True)
+        print("Loading tokenizer from base model: {0}".format(model_name), flush=True)
         tokenizer = LlamaTokenizer.from_pretrained(model_name, use_auth_token="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", legacy=False)
     print(len(tokenizer))
     print("Pad token id:", tokenizer.pad_token_id)
