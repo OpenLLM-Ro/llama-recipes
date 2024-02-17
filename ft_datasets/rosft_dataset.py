@@ -1,10 +1,11 @@
 import datasets
-from .roalpaca_dataset import get_preprocessed_roalpaca_dataset
-from .conversations_dataset import get_preprocessed_conversations_dataset
-from .rodolly_dataset import get_preprocessed_rodolly_dataset
-from .roselfinstruct_dataset import get_preprocessed_roselfinstruct_dataset
-from .ronorobots_dataset import get_preprocessed_ronorobots_dataset
-from .roorca_dataset import get_preprocessed_roorca_dataset
+from roalpaca_dataset import get_preprocessed_roalpaca_dataset
+from conversations_dataset import get_preprocessed_conversations_dataset
+from rodolly_dataset import get_preprocessed_rodolly_dataset
+from roselfinstruct_dataset import get_preprocessed_roselfinstruct_dataset
+from ronorobots_dataset import get_preprocessed_ronorobots_dataset
+from roorca_dataset import get_preprocessed_roorca_dataset
+from robench_dataset import get_preprocessed_robench_dataset
 
 SPLIT = "test"
 
@@ -15,8 +16,9 @@ def get_preprocessed_rosft_dataset(dataset_config, tokenizer, split):
     roselfinstruct_dataset = get_preprocessed_roselfinstruct_dataset(dataset_config, tokenizer, split)
     ronorobots_dataset = get_preprocessed_ronorobots_dataset(dataset_config, tokenizer, split)
     roorca_dataset = get_preprocessed_roorca_dataset(dataset_config, tokenizer, split)
+    robench_dataset = get_preprocessed_robench_dataset(dataset_config, tokenizer, split)
 
-    sft_dataset = datasets.concatenate_datasets([roalpaca_dataset, rodolly_dataset, roselfinstruct_dataset, ronorobots_dataset, roorca_dataset])
+    sft_dataset = datasets.concatenate_datasets([roalpaca_dataset, rodolly_dataset, roselfinstruct_dataset, ronorobots_dataset, roorca_dataset, robench_dataset])
     sft_dataset = sft_dataset.shuffle(seed=42)
     return sft_dataset
 
@@ -33,6 +35,7 @@ if __name__ == "__main__":
     roselfinstruct_dataset = get_preprocessed_roselfinstruct_dataset(None, tokenizer, SPLIT)
     ronorobots_dataset = get_preprocessed_ronorobots_dataset(None, tokenizer, SPLIT)
     roorca_dataset = get_preprocessed_roorca_dataset(None, tokenizer, SPLIT)
+    robench_dataset = get_preprocessed_robench_dataset(None, tokenizer, SPLIT)
 
     # print(convs_dataset)
     print(roalpaca_dataset)
@@ -40,9 +43,13 @@ if __name__ == "__main__":
     print(roselfinstruct_dataset)
     print(ronorobots_dataset)
     print(roorca_dataset)
+    print(robench_dataset)
+    print()
 
 
-    sft_dataset = datasets.concatenate_datasets([roalpaca_dataset, rodolly_dataset, roselfinstruct_dataset, ronorobots_dataset, roorca_dataset])
+
+    
+    sft_dataset = datasets.concatenate_datasets([roalpaca_dataset, rodolly_dataset, roselfinstruct_dataset, ronorobots_dataset, roorca_dataset, robench_dataset])
     print(sft_dataset)
 
     

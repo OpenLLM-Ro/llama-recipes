@@ -15,7 +15,7 @@ from chat_utils import format_conv, format_tokens
 import random
 
 top = -1
-nproc = 1
+nproc = 2
 
 LOADED_INSTRUCTIONS = None
 
@@ -28,11 +28,11 @@ def _load_instructions():
         data_path = Path("ft_datasets/ro_bench/winogrande_train_xl.json")
         instructions = json.load(open(data_path, encoding="utf-8"))
         insts.extend(instructions)
-        # data_path = Path("ft_datasets/ro_bench/winogrande_train_debiased.json")
-        # instructions = json.load(open(data_path, encoding="utf-8"))
-        # for i in instructions:
-        #     if i not in insts:
-        #         insts.append(i)
+        data_path = Path("ft_datasets/ro_bench/winogrande_train_debiased.json")
+        instructions = json.load(open(data_path, encoding="utf-8"))
+        for i in instructions:
+            if i not in insts:
+                insts.append(i)
         
         # arc
         data_path = Path("ft_datasets/ro_bench/arc_train.json")
@@ -107,7 +107,7 @@ def get_preprocessed_robench_dataset(dataset_config, tokenizer, split, compute_s
             text = "Întrebare: " + sample["instruction"] + "\nVariante:\n- {0}\n- {1}\n- {2}".format(sample["option_a"], sample["option_b"], sample["option_c"])
             if sample["option_d"] != None:
                 text = text +"\n- {0}".format(sample["option_d"])
-            if sample["option_e"] != None:
+            if "option_e" in sample and sample["option_e"] != None:
                 text = text +"\n- {0}".format(sample["option_e"])
             text += "\nRăspuns: "
             x = [{"role": "user", "content": text}]
@@ -151,7 +151,11 @@ def get_preprocessed_robench_dataset(dataset_config, tokenizer, split, compute_s
         instructions = instructions[:top]
   
     dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=instructions))
-    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["qID", "sentence", "answer", "id", "answer", "instruction", "option_a", "option_b", "option_c", "option_d", "option_e", "answer_text"], desc="Extract texts")
+
+
+    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["qID", "sentence", "answer", "id", "answer", "instruction", "option_a", "option_b", "option_c", "option_d", "answer_text", "option1", "option2", "question"], desc="Extract texts")
+    if "option_e" in dataset.features:
+        dataset = dataset.remove_columns("option_e")
     dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc, remove_columns=["prompt"], desc="Tokenize texts")
 
     if compute_stats == True:
