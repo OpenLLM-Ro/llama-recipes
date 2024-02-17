@@ -15,7 +15,7 @@ from chat_utils import format_conv, format_tokens
 import random
 
 top = -1
-nproc = 1
+nproc = 2
 
 LOADED_INSTRUCTIONS = None
 
