@@ -1,11 +1,11 @@
 import datasets
-from roalpaca_dataset import get_preprocessed_roalpaca_dataset
-from conversations_dataset import get_preprocessed_conversations_dataset
-from rodolly_dataset import get_preprocessed_rodolly_dataset
-from roselfinstruct_dataset import get_preprocessed_roselfinstruct_dataset
-from ronorobots_dataset import get_preprocessed_ronorobots_dataset
-from roorca_dataset import get_preprocessed_roorca_dataset
-from robench_dataset import get_preprocessed_robench_dataset
+from .roalpaca_dataset import get_preprocessed_roalpaca_dataset
+from .conversations_dataset import get_preprocessed_conversations_dataset
+from .rodolly_dataset import get_preprocessed_rodolly_dataset
+from .roselfinstruct_dataset import get_preprocessed_roselfinstruct_dataset
+from .ronorobots_dataset import get_preprocessed_ronorobots_dataset
+from .roorca_dataset import get_preprocessed_roorca_dataset
+from .robench_dataset import get_preprocessed_robench_dataset
 
 SPLIT = "test"
 
