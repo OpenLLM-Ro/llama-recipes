@@ -52,9 +52,8 @@ def format_tokens(dialogs, tokenizer, model_name, peft_model, prompt_type=None):
         else:
             # this is for raw llama maybe
             prompt = DEFAULT_SYSTEM_PROMPT_RO
-        print("Automatically selected ({0}).".format(prompt[:30]))
-
-        sys.exit()
+            print("Automatically selected ({0}).".format(prompt[:30]))
+            sys.exit()
     elif prompt_type == "foundational":
         prompt = DEFAULT_SYSTEM_PROMPT_NONE
     
