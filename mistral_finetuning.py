@@ -15,9 +15,9 @@ from tqdm import tqdm
 # Unused imports removed
 from utils import fsdp_auto_wrap_policy
 from transformers import (
-    LlamaForCausalLM,
-    LlamaTokenizer,
-    LlamaConfig,
+    MistralForCausalLM,
+    MistralTokenizer,
+    MistralConfig,
     AutoModelForCausalLM,
     AutoModelForSeq2SeqLM,
     AutoTokenizer,
@@ -69,6 +69,7 @@ import torch
 import torch.cuda.nccl as nccl
 import torch.distributed as dist
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
+from transformers.models.mistral.modeling_mistral import MistralDecoderLayer
 import wandb
 
 def main(**kwargs):
@@ -117,20 +118,20 @@ def main(**kwargs):
             raise Exception("latest pytorch nightly build is required to run with low_cpu_fsdp config, "
                             "please install latest nightly.")
         if rank == 0:
-            model = LlamaForCausalLM.from_pretrained(
+            model = MistralForCausalLM.from_pretrained(
                 train_config.model_name,
                 load_in_8bit=True if train_config.quantization else None,
                 device_map="auto" if train_config.quantization else None,
                 use_cache=use_cache,
             )
         else:
-            llama_config = LlamaConfig.from_pretrained(train_config.model_name)
+            llama_config = MistralConfig.from_pretrained(train_config.model_name)
             llama_config.use_cache = use_cache
             with torch.device("meta"):
-                model = LlamaForCausalLM(llama_config)
+                model = MistralForCausalLM(llama_config)
 
     else:
-        model = LlamaForCausalLM.from_pretrained(
+        model = MistralForCausalLM.from_pretrained(
             train_config.model_name,
             load_in_8bit=True if train_config.quantization else None,
             device_map="auto" if train_config.quantization else None,
@@ -160,7 +161,7 @@ def main(**kwargs):
         model.to(torch.bfloat16)
 
     # Load the tokenizer and add special tokens
-    tokenizer = LlamaTokenizer.from_pretrained(train_config.model_name, use_auth_token="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", legacy=False)
+    tokenizer = MistralTokenizer.from_pretrained(train_config.model_name, use_auth_token="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", legacy=False)
     # tokenizer.pad_token_id = tokenizer.eos_token_id
     # if train_config.type_of_model == "foundational":
         
@@ -193,7 +194,7 @@ def main(**kwargs):
             freeze_transformer_layers(train_config.num_freeze_layers)
 
         mixed_precision_policy, wrapping_policy = get_policies(fsdp_config, rank)
-        my_auto_wrapping_policy = fsdp_auto_wrap_policy(model, LlamaDecoderLayer)
+        my_auto_wrapping_policy = fsdp_auto_wrap_policy(model, MistralDecoderLayer)
    
         model = FSDP(
             model,
