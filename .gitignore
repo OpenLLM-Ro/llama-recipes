@@ -14,5 +14,9 @@ ft_datasets/ro_norobots/*
 ft_datasets/ro_orca/*
 ft_datasets/ro_selfinstruct/*
 ft_datasets/ro_bench/*
+ft_datasets/ro_camel/*
+ft_datasets/ro_ultrachat/*
+ft_datasets/ro_oasst/*
+test_tmp/*
 inference/texts_chats
 wandb/*
