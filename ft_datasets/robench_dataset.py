@@ -104,16 +104,24 @@ def get_preprocessed_robench_dataset(dataset_config, tokenizer, split, compute_s
             full = text
         # arc, mmlu
         elif sample["instruction"] != None:
-            text = "Întrebare: " + sample["instruction"] + "\nVariante:\n- {0}\n- {1}\n- {2}".format(sample["option_a"], sample["option_b"], sample["option_c"])
-            if sample["option_d"] != None:
-                text = text +"\n- {0}".format(sample["option_d"])
-            if "option_e" in sample and sample["option_e"] != None:
-                text = text +"\n- {0}".format(sample["option_e"])
-            text += "\nRăspuns: "
-            x = [{"role": "user", "content": text}]
-            prompt = format_conv(x, "Ești un asistent care răspunde la întrebări cu variante de răspuns. Alege răspunsul corect din variantele disponibile.")
-            full = prompt + " " + sample["option_{0}".format(sample["answer"].lower())]
-        
+            if "ARC-Challenge" in sample["id"]:
+                # arc
+                text = text = "Întrebare: " + sample["instruction"] + "\nRăspuns:"
+                x = [{"role": "user", "content": text}]
+                prompt = format_conv(x)
+                full = prompt + " " + sample["option_{0}".format(sample["answer"].lower())]
+            else:
+                # mmlu
+                text = "Întrebare: " + sample["instruction"] + "\nVariante:\nA. {0}\nB. {1}\nC. {2}".format(sample["option_a"], sample["option_b"], sample["option_c"])
+                if sample["option_d"] != None:
+                    text = text +"\nD. {0}".format(sample["option_d"])
+                if "option_e" in sample and sample["option_e"] != None:
+                    text = text +"\nE. {0}".format(sample["option_e"])
+                text += "\nRăspuns: "
+                x = [{"role": "user", "content": text}]
+                prompt = format_conv(x, "Ești un asistent care răspunde la întrebări cu variante de răspuns. Alege răspunsul corect din variantele disponibile.")
+                full = prompt + " " + sample["answer"]
+
         # gsm8k
         elif sample["question"] != None:
             text = sample["question"]
