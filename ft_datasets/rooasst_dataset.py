@@ -6,6 +6,7 @@
 import copy
 import json
 import sys
+import jsonlines
 from pathlib import Path
 import datasets
 import pandas as pd
@@ -15,23 +16,18 @@ from chat_utils import format_conv, format_tokens
 import random
 
 top = -1
-nproc = 1
+nproc = 2
 
-LOADED_INSTRUCTIONS = None
+LOADED_convs = None
 
 msgid_position = {}
 
 
-def _load_instructions():
-    global LOADED_INSTRUCTIONS
-    if LOADED_INSTRUCTIONS == None:
-        full_instructions = []
-        data_path = Path("ft_datasets/ro_oasst/2023-04-12_oasst_all.trees_ro.json")
-        instructions = json.load(open(data_path, encoding="utf-8"))
-        full_instructions.extend(instructions)
-        LOADED_INSTRUCTIONS = full_instructions
-
-    return LOADED_INSTRUCTIONS
+def _load_convs():
+    global LOADED_convs
+    if LOADED_convs == None:
+        LOADED_convs = load_dataset_oasst()
+    return LOADED_convs
 
 
 def get_split(convs, split):
@@ -68,7 +64,7 @@ def find_msg_by_id(msgs, id):
     return msgs[msgid_position[id]]
 
 
-def extract_conversation(root, level, msg_list, msgs, full_conv_list, fully_translated, fully_validated):
+def extract_conversation(root, level, msg_list, msgs, full_conv_list):
 
     fmsg = find_msg_by_id(msgs, root["message_id"])
     text_key = "text"
@@ -79,35 +75,69 @@ def extract_conversation(root, level, msg_list, msgs, full_conv_list, fully_tran
             crt = find_msg_by_id(msgs, root["message_id"])
             crt_list = []
             while crt.get("parent_id", None) != None:
-                crt_list.append([crt["role"], crt["text"]]) 
+                crt_list.append([crt["role"], crt["text"], crt["message_id"]]) 
                 
                 crt = find_msg_by_id(msgs, crt["parent_id"])
            
-            crt_list.append([crt["role"], crt["text"]])
+            crt_list.append([crt["role"], crt["text"], crt["message_id"]])
             full_conv_list.append(crt_list)
         for child in root["replies"]:
-            extract_conversation(child, level+1, msg_list, msgs, full_conv_list, fully_translated, fully_validated)
+            extract_conversation(child, level+1, msg_list, msgs, full_conv_list)
         
-    return full_conv_list, fully_translated, fully_validated
+    return full_conv_list
 
 
-def load_dataset_oasst(filepath):
-    global msgid_position
-    # random.seed(1238)
-
-    msg_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.messages-ro-translated-mbart.jsonl")
-    # msg_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.messages.jsonl")
+def build_new_msgs_file():
+    og_msg_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.messages-ro-translated-mbart.jsonl")
     tree_file = Path("ft_datasets/ro_oasst/2023-04-12_oasst_all.trees_ro.json")
 
-    ro = 0
+    msg_dict = {}
+    trees = json.load(tree_file.open('r', encoding="utf-8"))
+    for tree in trees:
+        root = tree["prompt"]
+        links = [root] + root["replies"]
+        for reply in links:
+            # print(reply["message_id"])
+            if reply["message_id"] not in msg_dict:
+                msg_dict[reply["message_id"]] = reply["text"]
+            if "replies" in reply:
+                links.extend(reply["replies"])
+
+    print(len(msg_dict))
+    with og_msg_file.open('r', encoding="utf-8") as f:
+        og_msgs = f.readlines()
+        og_msgs = list(map(lambda x: json.loads(x), og_msgs))
+    
+    print(len(og_msgs))
+    lines = []
+    for og_msg in og_msgs:
+        og_msg["text"] = msg_dict[og_msg["message_id"]]
+        lines.append(og_msg)
+
+    with jsonlines.Writer(open("ft_datasets/ro_oasst/2023-04-12_oasst_all.messages_ro.jsonl", "w", encoding="utf-8")) as writer:
+        writer.write_all(lines)
+    sys.exit()
+
+
+def load_dataset_oasst():
+    global msgid_position
+
+    og_msg_file = Path("ft_datasets/oasst1/2023-04-12_oasst_all.messages.jsonl")
+    with og_msg_file.open('r', encoding="utf-8") as f:
+        og_msgs = f.readlines()
+        og_msgs = list(map(lambda x: json.loads(x), og_msgs))
+
+
+    msg_file = Path("ft_datasets/ro_oasst/2023-04-12_oasst_all.messages_ro.jsonl")
+    tree_file = Path("ft_datasets/ro_oasst/2023-04-12_oasst_all.trees_ro.json")
+    # build new msg file
+    #build_new_msgs_file()
+
     with msg_file.open('r', encoding="utf-8") as f:
         msgs = f.readlines()
         msgs = list(map(lambda x: json.loads(x), msgs))
-        for msg in msgs:
-            if msg["lang"] == "ro":# or "text_translated_ro" in msg: 
-                ro += 1
+
     msgid_position = build_msgid_dict(msgs)
-   
     
     c = 0
     convs = []
@@ -115,32 +145,57 @@ def load_dataset_oasst(filepath):
     trees = json.load(tree_file.open('r', encoding="utf-8"))
     for tree in trees:
         root = tree["prompt"]
-        if (root["lang"] == "ro" or "text_translated_ro" in find_msg_by_id(msgs, root["message_id"])) and len(root["replies"]) > 0:
-            x, translated, validated = extract_conversation(root, 0, [], msgs, [], [], [])
-            if False in translated:
-                translated = False
-            else:
-                translated = True
+        if tree["tree_state"] != "ready_for_export":
+            continue
+        if len(root["replies"]) > 0:
+            x = extract_conversation(root, 0, [], msgs, [],)
+            to_remove_idx = []
+            for idx, conv in enumerate(x):
+                found = False
+                for turn in conv:
+                    if msgs[msgid_position[turn[-1]]] == og_msgs[msgid_position[turn[-1]]]:
+                        # we have un-translated reply
+                        found = True
+                        break
+                if found == True:
+                    to_remove_idx.append(idx)
             
-            if False in validated:
-                validated = False
-            else:
-                validated = True
-            
-            if translated == False and validated == True:
-                print("Translated false but validated?")
-                sys.exit()
-            
-            if translated == True:
-                dcs = {}
-                dcs["source"] = "oasst"
-                dcs["order"] = "reversed"
-                dcs["conv"] = x
-                convs.append(dcs)
-                c += 1
-    print(convs[0])
-    sys.exit()
+            for idx in to_remove_idx[::-1]:
+                del x[idx]
+
+
+            if x == []:
+                continue
+            x = list(map(lambda z: list(map(lambda y: [y[0], y[1]], z)), x))
+            dcs = {}
+            dcs["source"] = "oasst"
+            dcs["order"] = "reversed"
+            dcs["conv"] = x
+            convs.append(dcs)
+            c += 1
+
     return convs
+
+
+def expand_scraped_convs(convs):
+    expanded_convs = []
+    err = 0
+    for conv in convs:
+        if len(conv["conv"]) == 0:
+            err += 1
+            continue
+        if type(conv["conv"][0][0]) == list:
+            if "www.reddit.com/r" not in conv["source"] and "oasst" not in conv["source"]: 
+                print("Need to expand source <{0}> that is not reddit!".format(conv["source"]))
+                sys.exit()
+            for inner_conv in conv["conv"]:
+                new_conv_dict = copy.deepcopy(conv)
+                new_conv_dict["conv"] = inner_conv
+                expanded_convs.append(new_conv_dict)
+        else:
+            expanded_convs.append(conv)
+    return expanded_convs
+
 
 def get_preprocessed_rooasst_dataset(dataset_config, tokenizer, split, compute_stats=False):
 
@@ -151,21 +206,24 @@ def get_preprocessed_rooasst_dataset(dataset_config, tokenizer, split, compute_s
 
     print("RoOASST max words:", max_words)
 
-    load_dataset_oasst(None)
-    sys.exit()
-
+    
     def get_text(sample):
-        
+        if sample["order"] != "reversed":
+            print("BAD ORDER")
+            sys.exit()
+        conv = sample["conv"][::-1]        
         x = []
-        for id, d in enumerate(sample["data"]):
+        for id, d in enumerate(conv):
             if id % 2 == 0:
                 user = "user"
             else:
                 user = "assistant"
-            x.append({"role": user, "content": d})
+            x.append({"role": user, "content": d[1]})
+        if x[-1]["role"] == "user":
+            del x[-1]
+
         prompt = format_conv(x)
         return {"text": prompt}  
-
     
     def encode_texts(sample, tokenizer):
         return tokenizer(sample["text"])
@@ -176,37 +234,43 @@ def get_preprocessed_rooasst_dataset(dataset_config, tokenizer, split, compute_s
             if l[ind:ind+sll]==sl:
                 return ind,ind+sll-1
         return (-1, -1)
-    
+
     def prepare_input(sample, tokenizer, max_tokens):
         sample["input_ids"].append(tokenizer.eos_token_id)
         sample["attention_mask"].append(1)
-        end = sample["input_ids"].index(tokenizer.encode("[/INST]")[1])
+      
+        start_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == tokenizer.encode("[INST]")[1]]
+        end_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == tokenizer.encode("[/INST]")[1]]
+        if len(start_indexes) != len(end_indexes):
+            print("missmatch count of [INST] and [/INST]")
+            sys.exit()
 
-        # trim
-        # print(len(sample["input_ids"]), len(sample["attention_mask"]))
+        sample["labels"] = copy.deepcopy(sample["input_ids"])
+        for i in range(len(start_indexes)):
+            st = start_indexes[i]
+            if st == 1:
+                st = 0 
+            en = end_indexes[i]
+            sample["labels"][st:en+1] = [-100] * (en-st+1)
+
         sample["input_ids"] = sample["input_ids"][:max_tokens]
         sample["attention_mask"] = sample["attention_mask"][:max_tokens]
-        # print(len(sample["input_ids"]), len(sample["attention_mask"]))
-
-        # build labels
-        sample["labels"] = copy.deepcopy(sample["input_ids"])
-        sample["labels"][:end+1] = [-100] * (end+1)
         sample["labels"] = sample["labels"][:max_tokens]
-    
+        
         return {"input_ids": sample["input_ids"], "attention_mask": sample["attention_mask"], "labels": sample["labels"]}
 
+    convs = _load_convs()
+    convs = get_split(convs, split)
+    print("Threads:", len(convs))
+    convs = expand_scraped_convs(convs)
+    print("Convs (expanded):", len(convs))
 
-    instructions = _load_instructions()
-    instructions = get_split(instructions, split)
     if top != -1:
-        instructions = instructions[:top]
+        convs = convs[:top]
 
-
-    dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=instructions))
-
-    
-    sys.exit()
-    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["id", "data"], desc="Extract texts")
+    dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=convs))
+    print(dataset)    
+    dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["source", "conv", "order"], desc="Extract texts")
     dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc,  desc="Tokenize texts")
 
     if compute_stats == True:
@@ -218,6 +282,7 @@ def get_preprocessed_rooasst_dataset(dataset_config, tokenizer, split, compute_s
             print("{0}% over {1}".format(100.0*(lens>i).sum()/len(lens), i))
         print("########################################################################################")
         print()
+
 
     dataset = dataset.map(lambda sample: prepare_input(sample, tokenizer, max_words), remove_columns=["text"], num_proc=nproc, desc="Prepare inputs")
     dataset = dataset.shuffle(seed=42)
