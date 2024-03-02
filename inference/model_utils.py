@@ -8,14 +8,23 @@ from transformers import LlamaForCausalLM, LlamaConfig, MistralForCausalLM, Mist
 
 # Function to load the main model for text generation
 def load_model(model_name, quantization):
-    model = LlamaForCausalLM.from_pretrained(
-        model_name,
-        return_dict=True,
-        load_in_8bit=quantization,
-        device_map="auto",
-        low_cpu_mem_usage=True,
-        use_auth_token="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"
-    )
+    if "mistral" in model_name:
+        model = MistralForCausalLM.from_pretrained(
+            model_name,
+            return_dict=True,
+            load_in_8bit=quantization,
+            device_map="auto",
+            low_cpu_mem_usage=True,
+        )
+    else:
+        model = LlamaForCausalLM.from_pretrained(
+            model_name,
+            return_dict=True,
+            load_in_8bit=quantization,
+            device_map="auto",
+            low_cpu_mem_usage=True,
+            use_auth_token="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"
+        )
     return model
 
 
