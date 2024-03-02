@@ -66,9 +66,33 @@ def main(
 
     #load the FSDP sharded checkpoints into the model
     # model = load_sharded_model_single_gpu(model_def, fsdp_checkpoint_path)
-    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-meta-llama+Llama-2-7b-chat-hf/meta-llama+Llama-2-7b-chat-hf-0.pt"))
+    
+    # foundational 000-008
     #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-meta-llama+Llama-2-7b-hf/meta-llama+Llama-2-7b-hf-0.pt"))
-    model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024/models+v3+llama7b-full-1e-4_low-chunk1024-0.pt"))
+    # foundational 009-017
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024/models+v3+llama7b-full-1e-4_low-chunk1024-0.pt"))
+    # foundational 018-035
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024-009-017/models+v3+llama7b-full-1e-4_low-chunk1024-009-017-0.pt"))
+
+    # v4 on foundational 000-008
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk2048/models+v3+llama7b-full-1e-4_low-chunk2048-0.pt"))
+    # v4 on foundational 009-017
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024-009-017/models+v3+llama7b-full-1e-4_low-chunk1024-009-017-0.pt"))
+    # v4 on foundational 018-035
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024-018-035/models+v3+llama7b-full-1e-4_low-chunk1024-018-035-0.pt"))
+
+
+    # roalpaca v5.v7	
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024/models+v3+llama7b-full-1e-4_low-chunk1024-0.pt"))
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024-009-017/models+v3+llama7b-full-1e-4_low-chunk1024-009-017-0.pt"))
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v3+llama7b-full-1e-4_low-chunk1024-018-035/models+v3+llama7b-full-1e-4_low-chunk1024-018-035-0.pt"))
+
+    # roalpaca v6
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v4+llama7b-chat-5e-5_v3-low-chunk/models+v4+llama7b-chat-5e-5_v3-low-chunk-0.pt"))
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v4+llama7b-chat-5e-5_v3-low-chunk1024-018-035-n/models+v4+llama7b-chat-5e-5_v3-low-chunk1024-018-035-n-0.pt"))
+    #model = load_model_checkpoint(model_def, 0, os.path.join(fsdp_checkpoint_path, "fine-tuned-models+v4+llama7b-chat-5e-5_v3-low-chunk1024-018-035-nn/models+v4+llama7b-chat-5e-5_v3-low-chunk1024-018-035-nn-0.pt"))
+
+
     print("model is loaded from FSDP checkpoints")
     
     #save the FSDP sharded checkpoints in HF format
