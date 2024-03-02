@@ -2,7 +2,8 @@
 # This software may be used and distributed according to the terms of the GNU General Public License version 3.
 
 from peft import PeftModel
-from transformers import LlamaForCausalLM, LlamaConfig
+from transformers import LlamaForCausalLM, LlamaConfig, MistralForCausalLM, MistralConfig
+
 # from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # Function to load the main model for text generation
@@ -28,5 +29,10 @@ def load_llama_from_config(config_path):
     model_config = LlamaConfig.from_pretrained(config_path) 
     model = LlamaForCausalLM(config=model_config)
     return model
-    
+
+def load_mistral_from_config(config_path):
+    model_config = MistralConfig.from_pretrained(config_path) 
+    model = MistralForCausalLM(config=model_config)
+    return model
+
     
