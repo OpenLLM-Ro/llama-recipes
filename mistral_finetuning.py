@@ -16,7 +16,6 @@ from tqdm import tqdm
 from utils import fsdp_auto_wrap_policy
 from transformers import (
     MistralForCausalLM,
-    MistralTokenizer,
     MistralConfig,
     AutoModelForCausalLM,
     AutoModelForSeq2SeqLM,
@@ -161,7 +160,7 @@ def main(**kwargs):
         model.to(torch.bfloat16)
 
     # Load the tokenizer and add special tokens
-    tokenizer = MistralTokenizer.from_pretrained(train_config.model_name, use_auth_token="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", legacy=False)
+    tokenizer = AutoTokenizer.from_pretrained(train_config.model_name, use_auth_token="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", legacy=False)
     # tokenizer.pad_token_id = tokenizer.eos_token_id
     # if train_config.type_of_model == "foundational":
         
