@@ -74,18 +74,12 @@ def get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, compu
                 user = "assistant"
             x.append({"role": user, "content": d})
         prompt = format_conv(x)
+        prompt = prompt[:5] + prompt[5:].replace("[INST]", "</s><s>[INST]")
         return {"text": prompt}  
 
     def encode_texts(sample, tokenizer):
         return tokenizer(sample["text"])
- 
-    def find_sub_list(sl,l):
-        sll=len(sl)
-        for ind in (i for i,e in enumerate(l) if e==sl[0]):
-            if l[ind:ind+sll]==sl:
-                return ind,ind+sll-1
-        return (-1, -1)
-    
+     
     def prepare_input(sample, tokenizer, max_tokens):
         sample["input_ids"].append(tokenizer.eos_token_id)
         sample["attention_mask"].append(1)
@@ -99,10 +93,8 @@ def get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, compu
         sample["labels"] = copy.deepcopy(sample["input_ids"])
         for i in range(len(start_indexes)):
             st = start_indexes[i]
-            if st == 1:
-                st = 0 
             en = end_indexes[i]
-            sample["labels"][st:en+1] = [-100] * (en-st+1)
+            sample["labels"][st-1:en+1] = [-100] * (en-st+1+1)
 
         sample["input_ids"] = sample["input_ids"][:max_tokens]
         sample["attention_mask"] = sample["attention_mask"][:max_tokens]
