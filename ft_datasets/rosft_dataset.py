@@ -8,6 +8,7 @@ from .roorca_dataset import get_preprocessed_roorca_dataset
 from .robench_dataset import get_preprocessed_robench_dataset
 from .rooasst_dataset import get_preprocessed_rooasst_dataset
 from .roultrachat_dataset import get_preprocessed_roultrachat_dataset
+from .rocamel_dataset import get_preprocessed_rocamel_dataset
 
 SPLIT = "test"
 
@@ -23,8 +24,9 @@ def get_preprocessed_rosft_dataset(dataset_config, tokenizer, split):
     robench_dataset = get_preprocessed_robench_dataset(dataset_config, tokenizer, split, nproc=NPROC)
     rooasst_dataset = get_preprocessed_rooasst_dataset(dataset_config, tokenizer, split, nproc=NPROC)
     roultrachat_dataset = get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, nproc=NPROC)
+    rocamel_dataset = get_preprocessed_rocamel_dataset(dataset_config, tokenizer, split, nproc=NPROC)
 
-    sft_dataset = datasets.concatenate_datasets([roalpaca_dataset, rodolly_dataset, roselfinstruct_dataset, ronorobots_dataset, roorca_dataset, robench_dataset, rooasst_dataset, roultrachat_dataset])
+    sft_dataset = datasets.concatenate_datasets([roalpaca_dataset, rodolly_dataset, roselfinstruct_dataset, ronorobots_dataset, roorca_dataset, robench_dataset, rooasst_dataset, roultrachat_dataset, rocamel_dataset])
     sft_dataset = sft_dataset.shuffle(seed=42)
     return sft_dataset
 
