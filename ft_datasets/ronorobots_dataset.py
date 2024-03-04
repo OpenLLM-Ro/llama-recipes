@@ -15,7 +15,6 @@ from chat_utils import format_conv, format_tokens
 import random
 
 top = -1
-nproc = 2
 
 LOADED_INSTRUCTIONS = None
 
@@ -58,12 +57,15 @@ def get_split(convs, split):
     return split_convs
 
 
-def get_preprocessed_ronorobots_dataset(dataset_config, tokenizer, split, compute_stats=False):
+def get_preprocessed_ronorobots_dataset(dataset_config, tokenizer, split, compute_stats=False, nproc=None):
 
     if dataset_config == None:
         max_words = 256
     else:
         max_words = dataset_config.max_words
+
+    if nproc == None:
+        nproc = 1
 
     print("RoNoRobots max words:", max_words)
     def get_text(sample):

@@ -15,7 +15,6 @@ from chat_utils import format_conv, format_tokens
 import random
 
 top = -1
-nproc = 2
 
 LOADED_INSTRUCTIONS = None
 
@@ -84,12 +83,15 @@ def get_split(convs, split):
 
 
 
-def get_preprocessed_robench_dataset(dataset_config, tokenizer, split, compute_stats=False):
+def get_preprocessed_robench_dataset(dataset_config, tokenizer, split, compute_stats=False, nproc=None):
 
     if dataset_config == None:
         max_words = 512
     else:
         max_words = dataset_config.max_words
+
+    if nproc == None:
+        nproc = 1
 
     print("RoBench max words:", max_words)
     def get_text(sample):
