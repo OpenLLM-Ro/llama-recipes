@@ -85,9 +85,12 @@ def get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, compu
     def prepare_input(sample, tokenizer, max_tokens):
         sample["input_ids"].append(tokenizer.eos_token_id)
         sample["attention_mask"].append(1)
-      
-        start_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == tokenizer.encode("[INST]")[1]]
-        end_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == tokenizer.encode("[/INST]")[1]]
+
+        start_token = tokenizer.encode("[INST]")[1]
+        end_token = tokenizer.encode("[/INST]")[1]
+        start_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == start_token]
+        end_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == end_token]
+
         if len(start_indexes) != len(end_indexes):
             print("missmatch count of [INST] and [/INST]")
             sys.exit()
@@ -125,6 +128,7 @@ def get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, compu
 
     dataset = dataset.map(lambda sample: prepare_input(sample, tokenizer, max_words), remove_columns=["text"], num_proc=nproc, desc="Prepare inputs", keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-prepare.cache".format(split))
     dataset = dataset.shuffle(seed=42)
+    print(dataset[0])
 
     return dataset
 
