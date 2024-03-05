@@ -235,8 +235,11 @@ def get_preprocessed_rooasst_dataset(dataset_config, tokenizer, split, compute_s
         sample["input_ids"].append(tokenizer.eos_token_id)
         sample["attention_mask"].append(1)
       
-        start_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == tokenizer.encode("[INST]")[1]]
-        end_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == tokenizer.encode("[/INST]")[1]]
+        start_token = tokenizer.encode("[INST]")[1]
+        end_token = tokenizer.encode("[/INST]")[1]
+        start_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == start_token]
+        end_indexes = [i for i, x in enumerate(sample["input_ids"]) if x == end_token]
+
         if len(start_indexes) != len(end_indexes):
             print("missmatch count of [INST] and [/INST]")
             sys.exit()
