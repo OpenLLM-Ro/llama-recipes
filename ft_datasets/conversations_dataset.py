@@ -534,7 +534,7 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
     prompt_enc = tokenizer.encode(prompt)
     prompt_enc_size = len(prompt_enc)
 
-    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, remove_columns=["conv"], batched=True, desc="Tokenize texts", keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-1.cache".format(split))
+    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, remove_columns=["conv"], batched=True, desc="Tokenize texts", keep_in_memory=False, cache_file_name="test_tmp/convs_tmp-{0}-tokenize.cache".format(split))
     # dataset = dataset.remove_columns(["conv", "attention_mask"])
     # print(dataset)
     if compute_stats == True:
@@ -547,12 +547,12 @@ def get_preprocessed_conversations_dataset(dataset_config, tokenizer, split, com
         print("########################################################################################")
         print()
 
-    dataset = dataset.map(lambda sample: prepare_input(sample, prompt_enc, tokenizer, max_words), remove_columns=["input_ids", "attention_mask"], num_proc=nproc, desc="Build chunks of size {0}".format(max_words), keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-2.cache".format(split))
+    dataset = dataset.map(lambda sample: prepare_input(sample, prompt_enc, tokenizer, max_words), remove_columns=["input_ids", "attention_mask"], num_proc=nproc, desc="Build chunks of size {0}".format(max_words), keep_in_memory=False, cache_file_name="test_tmp/convs_tmp-{0}-prepare.cache".format(split))
     # dataset = dataset.remove_columns(["input_ids"])
     # print(dataset)
     dataset = dataset.shuffle(seed=42)
     columns_to_remove = dataset.column_names# + ["hf_dict_chunks"]
-    dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, remove_columns=columns_to_remove, desc="Flatten chunks", keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-3.cache".format(split))
+    dataset = dataset.map(flatten_chunks, batched=True, num_proc=nproc, remove_columns=columns_to_remove, desc="Flatten chunks", keep_in_memory=False, cache_file_name="test_tmp/convs_tmp-{0}-flatten.cache".format(split))
     # dataset = dataset.remove_columns(columns_to_remove)
     # print(dataset)
     # dataset = dataset.select_columns(["hf_dict_chunks", "source"])

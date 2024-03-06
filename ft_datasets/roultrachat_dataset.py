@@ -114,7 +114,7 @@ def get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, compu
 
     dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=instructions))
     dataset = dataset.map(get_text, num_proc=nproc, remove_columns=["id", "data"], desc="Extract texts")
-    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc,  desc="Tokenize texts", keep_in_memory=False, cache_file_name="test_tmp/ultrachat_tmp-{0}-extract.cache".format(split))
+    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), batched=True, num_proc=nproc,  desc="Tokenize texts", keep_in_memory=False, cache_file_name="test_tmp/ultrachat_tmp-{0}-tokenize.cache".format(split))
 
     if compute_stats == True:
         import numpy as np
@@ -126,7 +126,7 @@ def get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, compu
         print("########################################################################################")
         print()
 
-    dataset = dataset.map(lambda sample: prepare_input(sample, tokenizer, max_words), remove_columns=["text"], num_proc=nproc, desc="Prepare inputs", keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-prepare.cache".format(split))
+    dataset = dataset.map(lambda sample: prepare_input(sample, tokenizer, max_words), remove_columns=["text"], num_proc=nproc, desc="Prepare inputs", keep_in_memory=False, cache_file_name="test_tmp/ultrachat_tmp-{0}-prepare.cache".format(split))
     dataset = dataset.shuffle(seed=42)
 
     return dataset
