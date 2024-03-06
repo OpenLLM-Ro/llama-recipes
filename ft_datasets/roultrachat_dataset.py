@@ -128,7 +128,6 @@ def get_preprocessed_roultrachat_dataset(dataset_config, tokenizer, split, compu
 
     dataset = dataset.map(lambda sample: prepare_input(sample, tokenizer, max_words), remove_columns=["text"], num_proc=nproc, desc="Prepare inputs", keep_in_memory=False, cache_file_name="test_tmp/tmp-{0}-prepare.cache".format(split))
     dataset = dataset.shuffle(seed=42)
-    print(dataset[0])
 
     return dataset
 
