@@ -37,14 +37,14 @@ def test_ccnet():
     with open("ft_datasets/cultura_clean/ro_tail.json", "r", encoding="utf-8") as f:
         for line in f:
             if index % 100000 == 0:
-                print(index)
+                print(index, flush=True)
 
             # if index == 500000:
             #     break
 
             texts.append(eval(line)["raw_content"])
             index += 1
-    print("Done")
+    print("Done", flush=True)
     print(len(texts))
     print(len(set(texts)))
     sys.exit()
