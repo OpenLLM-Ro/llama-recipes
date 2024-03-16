@@ -3,6 +3,8 @@ import numpy as np
 import sys
 import json
 import pyarrow.parquet as pq
+import os
+
 
 def test_cultura():
     # dataset = load_dataset("ft_datasets/cultura_clean/raw", )["train"]
@@ -34,20 +36,52 @@ def test_ccnet():
 
     texts = set()
     index = 0
-    with open("ft_datasets/cultura_clean/ro_tail.json", "r", encoding="utf-8") as f:
-        for line in f:
-            if index % 100000 == 0:
-                print(index, flush=True)
-            texts.add(eval(line)["raw_content"])
-            index += 1
-    print("Done", flush=True)
-    print(len(texts))
+    folder = "ft_datasets/ccnet/raw/2019-04"
+    
+    for file in os.listdir(folder):
+        index = 0
+        file_path = os.path.join(folder, file)
+        if not (file_path.endswith(".json")):
+            continue
+        print(file)
+        with open(file_path, "r", encoding="utf-8") as f:
+            for line in f:
+                if index % 500000 == 0:
+                    print(index, len(texts), flush=True)
+                texts.add(eval(line)["raw_content"])
+                index += 1
+        print("Done {0}. Crt size {1}".format(file, len(texts)), flush=True)
+        print(len(texts))
 
+    print("Done full. Crt size: {0}".format(len(texts)))
+
+
+    save_index = 0
+    split = 300000
+    crt_index = 0
+    ds = []
+    for text in texts:
+        d = {}
+        d["raw_content"] = text
+        ds.append(d)
+        crt_index += 1
+        if crt_index >= split:
+            print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)))
+            json.dump(ds, open(os.path.join(folder, "out_{0}".format(save_index)), "w", encoding="utf-8"))
+            save_index += 1
+            crt_index = 0
+            ds = []
+    
+    print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)))
+    json.dump(ds, open(os.path.join(folder, "out_{0}".format(save_index)), "w", encoding="utf-8"))
     sys.exit()
 
-    dataset = load_dataset('json', data_files='ft_datasets/cultura_clean/ro_tail.json')["train"]
+    dataset = load_dataset('json', data_files='ft_datasets/cultura_clean/out.json')["train"]
     print(dataset)
-
+    for x in dataset:
+        print(x)
+        break
+    sys.exit()
     dataset1 = load_dataset('json', data_files='ft_datasets/cultura_clean/ro_tail_1.json')["train"]
     print(dataset1)
     sys.exit()
