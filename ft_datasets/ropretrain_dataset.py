@@ -39,8 +39,8 @@ def test_ccnet():
             if index % 100000 == 0:
                 print(index)
 
-            if index == 500000:
-                break
+            # if index == 500000:
+            #     break
 
             texts.append(eval(line)["raw_content"])
             index += 1
