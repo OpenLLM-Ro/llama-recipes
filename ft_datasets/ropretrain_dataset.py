@@ -32,8 +32,17 @@ def test_cultura():
 
 def test_ccnet():
 
-    a = json.load(open("ft_datasets/cultura_clean/ro_tail.json", "r", encoding="utf-8"))
-    print(len(a))
+    texts = []
+    index = 0
+    with open("ft_datasets/cultura_clean/ro_tail.json", "r", encoding="utf-8") as f:
+        for line in f:
+            if index % 10000 == 0:
+                print(index)
+            texts.append(eval(line)["raw_content"])
+            index += 1
+            if index == 50000:
+                break
+    print(len(texts))
     sys.exit()
 
     dataset = load_dataset('json', data_files='ft_datasets/cultura_clean/ro_tail.json')["train"]
