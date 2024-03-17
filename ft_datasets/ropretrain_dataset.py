@@ -7,12 +7,8 @@ import os
 
 
 def test_cultura():
-    # dataset = load_dataset("ft_datasets/cultura_clean/raw", )["train"]
-    dataset = load_dataset("ft_datasets/cultura_clean/raw")["train"]
-    # dataset = load_dataset("D:\cultura-x-merged")["train"]
-    # dataset = load_dataset("D:\cultura-x-merged", data_files=["ro_part_00000.parquet", "ro_part_00001.parquet", "ro_part_00002.parquet"])["train"]
-    # print(dataset)
-
+    # dataset = load_dataset("ft_datasets/cultura_clean/raw")["train"]
+    dataset = load_dataset("ft_datasets/cultura_clean/raw", data_files="ro_part_00000.parquet")["train"]
     dataset = dataset.filter(lambda x: len(x["Text"]) > 0 and not(x["Text"].endswith("...")) and len(x["Text"].split(" ")) > 25, num_proc=10)
     dataset = dataset.select_columns(["Text"]).rename_column("Text", "raw_text")
     dataset = dataset.shuffle(seed = 42)
@@ -113,9 +109,9 @@ def test_ccnet():
 
 if __name__ == "__main__":
 
-    # cultura = test_cultura()
-    # print(cultura)
-    # sys.exit()
+    cultura = test_cultura()
+    print(cultura)
+    sys.exit()
     ccnet = test_ccnet()
     sys.exit()
     print(cultura)
