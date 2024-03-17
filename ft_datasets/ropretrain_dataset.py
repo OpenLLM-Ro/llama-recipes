@@ -30,58 +30,49 @@ def test_cultura():
 
 def test_ccnet():
 
-    texts = set()
-    index = 0
-    folder = "ft_datasets/ccnet/raw/2019-26"
+    # texts = set()
+    # index = 0
+    # folder = "ft_datasets/ccnet/raw/2019-26"
     
-    for file in os.listdir(folder):
-        index = 0
-        file_path = os.path.join(folder, file)
-        if not (file_path.endswith(".json")):
-            continue
-        print(file)
-        with open(file_path, "r", encoding="utf-8") as f:
-            for line in f:
-                if index % 500000 == 0:
-                    print(index, len(texts), flush=True)
-                texts.add(eval(line)["raw_content"])
-                index += 1
-        print("Done {0}. Crt size {1}".format(file, len(texts)), flush=True)
-        print(len(texts))
+    # for file in os.listdir(folder):
+    #     index = 0
+    #     file_path = os.path.join(folder, file)
+    #     if not (file_path.endswith(".json")):
+    #         continue
+    #     print(file)
+    #     with open(file_path, "r", encoding="utf-8") as f:
+    #         for line in f:
+    #             if index % 500000 == 0:
+    #                 print(index, len(texts), flush=True)
+    #             texts.add(eval(line)["raw_content"])
+    #             index += 1
+    #     print("Done {0}. Crt size {1}".format(file, len(texts)), flush=True)
+    #     print(len(texts))
 
-    print("Done full. Crt size: {0}".format(len(texts)))
+    # print("Done full. Crt size: {0}".format(len(texts)))
 
 
-    save_index = 0
-    split = 3000000
-    crt_index = 0
-    ds = []
-    for text in texts:
-        d = {}
-        d["raw_content"] = text
-        ds.append(d)
-        crt_index += 1
-        if crt_index >= split:
-            print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)))
-            json.dump(ds, open(os.path.join(folder, "out_{0}.json".format(save_index)), "w", encoding="utf-8"))
-            save_index += 1
-            crt_index = 0
-            ds = []
+    # save_index = 0
+    # split = 3000000
+    # crt_index = 0
+    # ds = []
+    # for text in texts:
+    #     d = {}
+    #     d["raw_content"] = text
+    #     ds.append(d)
+    #     crt_index += 1
+    #     if crt_index >= split:
+    #         print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)))
+    #         json.dump(ds, open(os.path.join(folder, "out_{0}.json".format(save_index)), "w", encoding="utf-8"))
+    #         save_index += 1
+    #         crt_index = 0
+    #         ds = []
     
-    print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)), flush=True)
-    json.dump(ds, open(os.path.join(folder, "out_{0}.json".format(save_index)), "w", encoding="utf-8"))
-    sys.exit()
+    # print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)), flush=True)
+    # json.dump(ds, open(os.path.join(folder, "out_{0}.json".format(save_index)), "w", encoding="utf-8"))
+    # sys.exit()
 
-    dataset = load_dataset('json', data_files='ft_datasets/cultura_clean/out.json')["train"]
-    print(dataset)
-    for x in dataset:
-        print(x)
-        break
-    sys.exit()
-    dataset1 = load_dataset('json', data_files='ft_datasets/cultura_clean/ro_tail_1.json')["train"]
-    print(dataset1)
-    sys.exit()
-
+    dataset = load_dataset('json', data_files='ft_datasets/ccnet/raw/dedups', data_files="out_0.json")["train"]
     dataset = dataset.filter(lambda x: len(x["raw_content"]) > 0 and len(x["raw_content"].split(" ")) > 25 and x["language"] == "ro", num_proc=10)
     dataset = dataset.select_columns(["raw_content"]).rename_column("raw_content", "raw_text")
     dataset = dataset.shuffle(seed = 42)
@@ -110,13 +101,9 @@ def test_ccnet():
 if __name__ == "__main__":
 
     cultura = test_cultura()
-    print(cultura)
-    sys.exit()
     ccnet = test_ccnet()
-    sys.exit()
-    print(cultura)
-
-    print(ccnet)
+    print("Cultura:", cultura)
+    print("CCNet:", ccnet)
     dataset = concatenate_datasets([cultura, ccnet])
     dataset = dataset.shuffle(seed = 42)
     print(dataset)
@@ -148,7 +135,7 @@ if __name__ == "__main__":
     print("########################################################################################")
     print()
 
-
-
-    # dataset.save_to_disk("ft_datasets/cultura_clean", max_shard_size="1GB")
-    # dataset = load_from_disk("ft_datasets/cultura_clean/")
+    dataset.save_to_disk("ft_datasets/ccnet_cultura", max_shard_size="1GB")
+    print("Saved")
+    dataset = load_from_disk("ft_datasets/ccnet_cultura/")
+    print("Loaded:", dataset)
