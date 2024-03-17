@@ -36,7 +36,7 @@ def test_ccnet():
 
     texts = set()
     index = 0
-    folder = "ft_datasets/ccnet/raw/2019-04"
+    folder = "ft_datasets/ccnet/raw/2019-26"
     
     for file in os.listdir(folder):
         index = 0
@@ -57,7 +57,7 @@ def test_ccnet():
 
 
     save_index = 0
-    split = 300000
+    split = 3000000
     crt_index = 0
     ds = []
     for text in texts:
@@ -67,13 +67,13 @@ def test_ccnet():
         crt_index += 1
         if crt_index >= split:
             print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)))
-            json.dump(ds, open(os.path.join(folder, "out_{0}".format(save_index)), "w", encoding="utf-8"))
+            json.dump(ds, open(os.path.join(folder, "out_{0}.json".format(save_index)), "w", encoding="utf-8"))
             save_index += 1
             crt_index = 0
             ds = []
     
-    print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)))
-    json.dump(ds, open(os.path.join(folder, "out_{0}".format(save_index)), "w", encoding="utf-8"))
+    print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)), flush=True)
+    json.dump(ds, open(os.path.join(folder, "out_{0}.json".format(save_index)), "w", encoding="utf-8"))
     sys.exit()
 
     dataset = load_dataset('json', data_files='ft_datasets/cultura_clean/out.json')["train"]
