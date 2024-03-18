@@ -3,13 +3,15 @@ import numpy as np
 import sys
 sys.path.insert(1, 'inference/')
 sys.path.insert(1, 'utils/')
+from .utils import get_split
 import json
 import os
 import random
 import copy
 
-top = 10
-nproc = 1
+
+top = -1
+nproc = 2
 
 LOADED_DATA = None
 
@@ -19,27 +21,6 @@ def _load_pretrain_from_disk():
         LOADED_DATA = datasets.load_from_disk('ft_datasets/ccnet_cultura')
 
     return LOADED_DATA
-
-def get_split(convs, split):
-
-    if split == "full":
-        return convs
-    split_convs = []
-    # set random seed
-    random.seed(1238)
-
-    for conv in convs:
-        rs = random.random()
-        if split == "train" and rs < 0.85:
-            split_convs.append(conv)
-        elif split == "dev" and rs > 0.85 and rs < 0.9: 
-            split_convs.append(conv)
-        elif split == "test" and rs > 0.9:
-            split_convs.append(conv)
-        elif split == "train+dev" and rs < 0.9:
-            split_convs.append(conv)
-    random.seed()
-    return split_convs
 
 def chunk_list(lst, n):
         """Yield successive n-sized chunks from lst."""
@@ -91,7 +72,7 @@ def get_preprocessed_ropretrain_dataset(dataset_config, tokenizer, split, comput
     split_indexes = get_split(list(range(len(dataset))), split)
     dataset = dataset.select(split_indexes)
     print("Len of {1} split pretraining dataset: {0}".format(len(dataset), split), flush=True)
-    sys.exit()
+
     if top != -1:
         dataset = dataset.select(range(top))
     dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, batched=True, remove_columns=["raw_text"], desc="Tokenize texts")
@@ -114,4 +95,4 @@ if __name__ == "__main__":
 
     from transformers import AutoTokenizer, AutoModelForCausalLM
     tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
-    get_preprocessed_ropretrain_dataset(None, tokenizer, "dev")
+    get_preprocessed_ropretrain_dataset(None, tokenizer, "test")

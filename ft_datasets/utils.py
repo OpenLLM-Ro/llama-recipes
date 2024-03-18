@@ -4,6 +4,7 @@
 from tqdm import tqdm
 from itertools import chain
 from torch.utils.data import Dataset
+import random
 
 class Concatenator(object):
     def __init__(self, chunk_size=128):
@@ -62,3 +63,25 @@ class ConcatDataset(Dataset):
     
     def __len__(self):
         return len(self.samples)
+    
+
+def get_split(convs, split):
+
+    if split == "full":
+        return convs
+    split_convs = []
+    # set random seed
+    random.seed(1238)
+
+    for conv in convs:
+        rs = random.random()
+        if split == "train" and rs < 0.85:
+            split_convs.append(conv)
+        elif split == "dev" and rs > 0.85 and rs < 0.95: 
+            split_convs.append(conv)
+        elif split == "test" and rs > 0.95:
+            split_convs.append(conv)
+        elif split == "train+dev" and rs < 0.95:
+            split_convs.append(conv)
+    random.seed()
+    return split_convs
