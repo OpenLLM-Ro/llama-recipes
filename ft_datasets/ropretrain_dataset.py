@@ -10,8 +10,8 @@ import random
 import copy
 
 
-top = -1
-nproc = 2
+top = 15000
+nproc = 4
 
 LOADED_DATA = None
 

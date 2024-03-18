@@ -124,7 +124,10 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
 
                         optimizer.step()
                         optimizer.zero_grad()
-                # lr_scheduler.step()
+                lr_scheduler.step()
+                if wandb_run != None and step % 25 == 0:
+                    wandb_run.log({"learning_rate": optimizer.param_groups[0]['lr']})
+
                 # if train_config.enable_fsdp:
                 #     if rank==0:       
                 #         print(f"\n step {step} is completed and loss is {loss.detach().float()}")
@@ -156,7 +159,7 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
             print(f"CPU Total Peak Memory consumed during the train (max): {memtrace.cpu_peaked + memtrace.cpu_begin} GB")
         
         # Update the learning rate as needed
-        lr_scheduler.step()
+        # lr_scheduler.step()
         print('Epoch-{0} lr: {1}'.format(epoch, optimizer.param_groups[0]['lr']))
 
           

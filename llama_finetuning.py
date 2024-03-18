@@ -211,7 +211,7 @@ def main(**kwargs):
     dataset_config = generate_dataset_config(train_config, kwargs)
     
     if not train_config.enable_fsdp or rank == 0:
-        wandb_run = wandb.init(project="first-test",
+        wandb_run = wandb.init(project="second-wave",
                                config={"learning_rate": train_config.lr, "model_name": train_config.model_name, 
                                        "model type": train_config.type_of_model, "max_words": dataset_config.max_words})
     else:
@@ -305,7 +305,7 @@ def main(**kwargs):
     # scheduler = torch.optim.lr_scheduler.SequentialLR(optimizer, schedulers=[scheduler1, scheduler2], milestones=[warmup_steps])
     # print(scheduler)
     # # sys.exit()
-    scheduler = StepLR(optimizer, step_size=1, gamma=train_config.gamma)
+    scheduler = StepLR(optimizer, step_size=steps_for_one_epoch, gamma=train_config.gamma)
 
     # Start the training process
     results = train(
