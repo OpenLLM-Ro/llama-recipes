@@ -96,7 +96,7 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
                         batch[key] = batch[key].to('cuda:0')              
                 loss = model(**batch).loss
                 loss = loss / gradient_accumulation_steps
-                if wandb_run != None and step % 25 == 0:
+                if wandb_run != None and step % 1 == 0:
                     wandb_run.log({"train_loss": loss})
                 total_loss += loss.detach().float()
                 
@@ -125,8 +125,8 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
                         optimizer.step()
                         optimizer.zero_grad()
                 lr_scheduler.step()
-                if wandb_run != None and step % 25 == 0:
-                    wandb_run.log({"learning_rate": optimizer.param_groups[0]['lr']})
+                if wandb_run != None and step % 1 == 0:
+                    wandb_run.log({"lr": optimizer.param_groups[0]['lr']})
 
                 # if train_config.enable_fsdp:
                 #     if rank==0:       
