@@ -1,160 +1,117 @@
-from datasets import load_dataset, load_from_disk, concatenate_datasets
+import datasets
 import numpy as np
 import sys
+sys.path.insert(1, 'inference/')
+sys.path.insert(1, 'utils/')
 import json
-import pyarrow.parquet as pq
 import os
+import random
+import copy
 
+top = 10
+nproc = 1
 
-def test_cultura():
-    dataset = load_dataset("ft_datasets/cultura_clean/raw")["train"]
-    #dataset = load_dataset("ft_datasets/cultura_clean/raw", data_files="ro_part_00000.parquet")["train"]
-    dataset = dataset.filter(lambda x: len(x["Text"]) > 0 and not(x["Text"].endswith("...")) and len(x["Text"].split(" ")) > 25, num_proc=10)
-    dataset = dataset.select_columns(["Text"]).rename_column("Text", "raw_text")
-    dataset = dataset.shuffle(seed = 42)
-    return dataset
+LOADED_DATA = None
+
+def _load_pretrain_from_disk():
+    global LOADED_DATA
+    if LOADED_DATA == None:
+        LOADED_DATA = datasets.load_from_disk('ft_datasets/ccnet_cultura')
+
+    return LOADED_DATA
+
+def get_split(convs, split):
+
+    if split == "full":
+        return convs
+    split_convs = []
+    # set random seed
+    random.seed(1238)
+
+    for conv in convs:
+        rs = random.random()
+        if split == "train" and rs < 0.85:
+            split_convs.append(conv)
+        elif split == "dev" and rs > 0.85 and rs < 0.9: 
+            split_convs.append(conv)
+        elif split == "test" and rs > 0.9:
+            split_convs.append(conv)
+        elif split == "train+dev" and rs < 0.9:
+            split_convs.append(conv)
+    random.seed()
+    return split_convs
+
+def chunk_list(lst, n):
+        """Yield successive n-sized chunks from lst."""
+        for i in range(0, len(lst), n):
+            yield lst[i:i + n]
+
+def encode_texts(sample, tokenizer):
+    return tokenizer(sample["raw_text"])
+
+def prepare_input(sample, prompt_enc, tokenizer, max_tokens):
+    full_doc_enc = sample["input_ids"]
+    full_doc_enc.append(tokenizer.eos_token_id)
+    chunks = list(chunk_list(full_doc_enc, max_tokens-len(prompt_enc)))
+    hf_dict_chunks = {}
+    for chunk_id, chunk in enumerate(chunks):
+        if chunk_id == 0:
+            hf_dict_chunks["input_ids"] = [prompt_enc + chunk]
+            hf_dict_chunks["attention_mask"] = [[1] * len(hf_dict_chunks["input_ids"][0])]
+            hf_dict_chunks["labels"] = copy.deepcopy(hf_dict_chunks["input_ids"])
+            hf_dict_chunks["labels"][0][:len(prompt_enc)] = [-100] * len(prompt_enc)
+        else:
+            hf_dict_chunks["input_ids"].append(prompt_enc + chunk)
+            hf_dict_chunks["attention_mask"].append([1] * len(hf_dict_chunks["input_ids"][chunk_id]))
+            hf_dict_chunks["labels"].append(copy.deepcopy(hf_dict_chunks["input_ids"][chunk_id]))
+            hf_dict_chunks["labels"][chunk_id][:len(prompt_enc)] = [-100] * len(prompt_enc)
+    return {"hf_dict_chunks": hf_dict_chunks}
+
+def flatten_chunks(chunks):
+        ii = []
+        aa = []
+        ll = []
+        for chunk in chunks["hf_dict_chunks"]:
+            for x in range(len(chunk["input_ids"])):
+                ii.append(chunk["input_ids"][x])
+                aa.append(chunk["attention_mask"][x])
+                ll.append(chunk["labels"][x])
+        return {"input_ids": ii, "attention_mask": aa, "labels": ll}
+
+def get_preprocessed_ropretrain_dataset(dataset_config, tokenizer, split, compute_stats=False):
+
+    if dataset_config == None:
+        max_words = 512
+    else:
+        max_words = dataset_config.max_words
+
+    dataset = _load_pretrain_from_disk()
+    print("Len of entire pretraining dataset:", len(dataset), flush=True)
+
+    split_indexes = get_split(list(range(len(dataset))), split)
+    dataset = dataset.select(split_indexes)
+    print("Len of {1} split pretraining dataset: {0}".format(len(dataset), split), flush=True)
+    sys.exit()
+    if top != -1:
+        dataset = dataset.select(range(top))
+    dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, batched=True, remove_columns=["raw_text"], desc="Tokenize texts")
     
+    if compute_stats == True:
+        import numpy as np
+        lens = np.array(list(map(lambda x: len(x["input_ids"])+1, dataset)))
+        print(len(lens))
+        print(np.min(lens), np.mean(lens), np.median(lens), np.max(lens), np.quantile(lens, 0.75), np.quantile(lens, 0.85), np.quantile(lens, 0.90))
+        for i in [256, 512, 1024, 2048, 4096]:
+            print("{0}% over {1}".format(100.0*(lens>i).sum()/len(lens), i))
+        print("########################################################################################")
+        print()
 
-    print(dataset)
-    sys.exit()
-    dataset.save_to_disk("ft_datasets/cultura_clean", max_shard_size="2GB")
-    sys.exit()
-    # lens_chars = list(map(lambda x: len(x["Text"]), dataset))
-    # lens_words = list(map(lambda x: len(x["Text"].split(" ")), dataset))
-    # print(len(lens_chars), len(lens_words))
-
-    # for t, x in [("Chars", lens_chars), ("Words", lens_words)]:
-    #     print("{0}: Min: {1:3d} Mean: {2:.2f} Median: {3:.2f} Max: {4} Q5: {5:.2f} Q90: {6:2f}".format(t, np.min(x), np.mean(x), np.median(x), np.max(x), np.quantile(x, 0.05), np.quantile(x, 0.9)))
-    # sys.exit()
-
-
-def test_ccnet():
-
-    texts = set()
-    index = 0
-    folder = "ft_datasets/ccnet/raw/2019-26"
-    
-    for file in os.listdir(folder):
-        index = 0
-        file_path = os.path.join(folder, file)
-        if not (file_path.endswith(".json")):
-            continue
-        print(file)
-        with open(file_path, "r", encoding="utf-8") as f:
-            for line in f:
-                if index % 500000 == 0:
-                    print(index, len(texts), flush=True)
-
-                e = eval(line)
-                if e["language"] != "ro":
-                    continue
-
-                texts.add(e["raw_content"])
-                index += 1
-        print("Done {0}. Crt size {1}".format(file, len(texts)), flush=True)
-        #print(len(texts))
-        #break
-
-    print("Done full. Crt size: {0}".format(len(texts)))
-
-
-    save_index = 84
-    split = 500000
-    crt_index = 0
-    ds = []
-    for text in texts:
-        d = {}
-        d["raw_content"] = text
-        ds.append(d)
-        crt_index += 1
-        if crt_index >= split:
-            print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)), flush=True)
-            json.dump(ds, open(os.path.join(folder, "out_{0:03d}.json".format(save_index)), "w", encoding="utf-8"))
-            save_index += 1
-            crt_index = 0
-            ds = []
-    
-    print("Saving index: {0}. Saving data: {1}".format(save_index, len(ds)), flush=True)
-    json.dump(ds, open(os.path.join(folder, "out_{0:03d}.json".format(save_index)), "w", encoding="utf-8"))
-    sys.exit()
-
-    dataset = load_dataset('json', data_files='ft_datasets/ccnet/raw/dedups/out_8.json')["train"]
-    dataset = dataset.filter(lambda x: len(x["raw_content"]) > 0 and len(x["raw_content"].split(" ")) > 25 and x["language"] == "ro", num_proc=10)
-    dataset = dataset.select_columns(["raw_content"]).rename_column("raw_content", "raw_text")
-    dataset = dataset.shuffle(seed = 42)
-    # print(dataset)
+    dataset = dataset.map(lambda sample: prepare_input(sample, [], tokenizer, max_words), num_proc=nproc, remove_columns=["attention_mask", "input_ids"], desc="Build chunks of size {0}".format(max_words))
+    dataset = dataset.map(flatten_chunks, batched=True, remove_columns=["hf_dict_chunks"], num_proc=nproc, desc="Flatten chunks")
     return dataset
-
-
-    dataset.save_to_disk("ft_datasets/cultura_clean", max_shard_size="2GB")
-    sys.exit()
-
-    for x in dataset:
-        print(x)
-        break
-
-
-    lens_chars = list(map(lambda x: len(x["raw_content"]), dataset))
-    lens_words = list(map(lambda x: len(x["raw_content"].split(" ")), dataset))
-    print(len(lens_chars), len(lens_words))
-
-    for t, x in [("Chars", lens_chars), ("Words", lens_words)]:
-        print("{0}: Min: {1:3d} Mean: {2:.2f} Median: {3:.2f} Max: {4} Q5: {5:.2f} Q90: {6:2f}".format(t, np.min(x), np.mean(x), np.median(x), np.max(x), np.quantile(x, 0.05), np.quantile(x, 0.9)))
-    sys.exit()
-
-
-
-def load_ccnet():
-    dataset = load_dataset('json', data_files='ft_datasets/ccnet/raw/dedups/*.json')["train"]
-    #dataset = load_dataset('json', data_files='ft_datasets/ccnet/raw/dedups/out_000.json')["train"]
-    dataset = dataset.filter(lambda x: len(x["raw_content"]) > 0 and len(x["raw_content"].split(" ")) > 25, num_proc=10)
-    dataset = dataset.select_columns(["raw_content"]).rename_column("raw_content", "raw_text")
-    dataset = dataset.shuffle(seed = 42)
-    #print(dataset)
-    #sys.exit()
-    return dataset
-
 
 if __name__ == "__main__":
-    cultura = test_cultura()
-    #ccnet = test_ccnet()
-    ccnet = load_ccnet()
-    print("Cultura:", cultura, flush=True)
-    print("CCNet:", ccnet, flush=True)
-    dataset = concatenate_datasets([cultura, ccnet])
-    dataset = dataset.shuffle(seed = 42)
-    print(dataset)
 
-    dataset.save_to_disk("ft_datasets/ccnet_cultura", max_shard_size="1GB")
-    print("Saved", flush=True)
-
-
-    lens_chars = list(map(lambda x: len(x["raw_text"]), dataset))
-    lens_words = list(map(lambda x: len(x["raw_text"].split(" ")), dataset))
-    print(len(lens_chars), len(lens_words), flush=True)
-
-    for t, x in [("Chars", lens_chars), ("Words", lens_words)]:
-        print("{0}: Min: {1:3d} Mean: {2:.2f} Median: {3:.2f} Max: {4} Q5: {5:.2f} Q90: {6:2f}".format(t, np.min(x), np.mean(x), np.median(x), np.max(x), np.quantile(x, 0.05), np.quantile(x, 0.9)))
-
-    #from transformers import AutoTokenizer, AutoModelForCausalLM
-    #tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
-
-    #def get_text(sample):
-    #    return {"text": sample["raw_text"]}
-
-    #def encode_texts(sample, tokenizer):
-    #    return tokenizer(sample["text"])
-
-    #culturaX_dataset = dataset.map(get_text, num_proc=10, remove_columns=["raw_text"], desc="Extract texts")
-    #culturaX_dataset = culturaX_dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=10, batched=True, remove_columns=["text"], desc="Tokenize texts")
-
-    #lens = np.array(list(map(lambda x: len(x["input_ids"])+1, culturaX_dataset)))
-    #print(len(lens))
-    #print(np.min(lens), np.mean(lens), np.median(lens), np.max(lens), np.quantile(lens, 0.75), np.quantile(lens, 0.85), np.quantile(lens, 0.90))
-    #for i in [256, 512, 1024, 2048, 4096]:
-    #    print("{0}% over {1}".format(100.0*(lens>i).sum()/len(lens), i))
-    #print("########################################################################################")
-    #print()
-
-    dataset = load_from_disk("ft_datasets/ccnet_cultura/")
-    print("Loaded:", dataset)
+    from transformers import AutoTokenizer, AutoModelForCausalLM
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
+    get_preprocessed_ropretrain_dataset(None, tokenizer, "dev")

@@ -12,3 +12,4 @@ from .foundational_dataset import get_preprocessed_foundational_dataset as get_f
 from .conversations_dataset import get_preprocessed_conversations_dataset as get_conversations_dataset
 from .roalpaca_dataset import get_preprocessed_roalpaca_dataset as get_roalpaca_dataset
 from .rosft_dataset import get_preprocessed_rosft_dataset as get_rosft_dataset
+from .ropretrain_dataset import get_preprocessed_ropretrain_dataset as get_ropretrain_dataset

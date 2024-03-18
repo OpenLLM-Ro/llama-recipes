@@ -3,6 +3,23 @@
 
 from dataclasses import dataclass
 
+
+@dataclass
+class ropretrain_dataset:
+    dataset: str = "ropretrain_dataset"
+    train_split: str = "train+dev"
+    test_split: str = "test"
+    max_words: int = 1024
+
+
+
+@dataclass
+class rosft_dataset:
+    dataset: str = "rosft_dataset"
+    train_split: str = "train+dev"
+    test_split: str = "test"
+    max_words: int = 1024
+
     
 @dataclass
 class samsum_dataset:
@@ -49,13 +66,6 @@ class roalpaca_dataset:
     test_split: str = "test"
     max_words: int = 1024
 
-
-@dataclass
-class rosft_dataset:
-    dataset: str = "rosft_dataset"
-    train_split: str = "train+dev"
-    test_split: str = "test"
-    max_words: int = 1024
 
 
 @dataclass

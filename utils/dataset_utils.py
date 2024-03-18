@@ -15,7 +15,8 @@ from ft_datasets import (
     get_foundational_dataset,
     get_conversations_dataset,
     get_roalpaca_dataset,
-    get_rosft_dataset
+    get_rosft_dataset,
+    get_ropretrain_dataset
     
 
 )
@@ -32,7 +33,9 @@ DATASET_PREPROC = {
     "foundational_dataset": get_foundational_dataset,
     "conversations_dataset": get_conversations_dataset,
     "roalpaca_dataset": get_roalpaca_dataset,
-    "rosft_dataset": get_rosft_dataset
+    "rosft_dataset": get_rosft_dataset,
+    "ropretrain_dataset": get_ropretrain_dataset
+
 }
 
 
