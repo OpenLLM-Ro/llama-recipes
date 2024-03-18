@@ -84,6 +84,7 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
     if train_config.enable_fsdp and not train_config.use_peft:
         save_train_params(train_config, fsdp_config, rank)
 
+    global_step = 0
     for epoch in range(train_config.num_epochs):
         with MemoryTrace() as memtrace:  # track the memory usage
             model.train()
@@ -98,7 +99,7 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
                 loss = loss / gradient_accumulation_steps
                 if wandb_run != None and step % 1 == 0:
                     if not train_config.enable_fsdp or rank==0:
-                        wandb_run.log({"train_loss": loss.detach().float()})
+                        wandb_run.log({"train_loss": loss.detach().float()}, step=global_step)
                 total_loss += loss.detach().float()
                 
                 if train_config.use_fp16:
@@ -128,8 +129,8 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
                 lr_scheduler.step()
                 if wandb_run != None and step % 1 == 0:
                     if not train_config.enable_fsdp or rank==0:
-                        wandb_run.log({"lr": optimizer.param_groups[0]['lr']})
-
+                        wandb_run.log({"lr": optimizer.param_groups[0]['lr']}, step=global_step)
+                global_step += 1
                 # if train_config.enable_fsdp:
                 #     if rank==0:       
                 #         print(f"\n step {step} is completed and loss is {loss.detach().float()}")
