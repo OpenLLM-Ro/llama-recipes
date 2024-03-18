@@ -97,7 +97,8 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
                 loss = model(**batch).loss
                 loss = loss / gradient_accumulation_steps
                 if wandb_run != None and step % 1 == 0:
-                    wandb_run.log({"train_loss": loss})
+                    if not train_config.enable_fsdp or rank==0:
+                        wandb_run.log({"train_loss": loss.detach().float()})
                 total_loss += loss.detach().float()
                 
                 if train_config.use_fp16:
@@ -126,7 +127,8 @@ def train(model, train_dataloader, eval_dataloader, tokenizer, optimizer, lr_sch
                         optimizer.zero_grad()
                 lr_scheduler.step()
                 if wandb_run != None and step % 1 == 0:
-                    wandb_run.log({"lr": optimizer.param_groups[0]['lr']})
+                    if not train_config.enable_fsdp or rank==0:
+                        wandb_run.log({"lr": optimizer.param_groups[0]['lr']})
 
                 # if train_config.enable_fsdp:
                 #     if rank==0:       
