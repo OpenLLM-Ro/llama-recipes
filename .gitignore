@@ -5,6 +5,7 @@ agent/offload
 models/*
 ft_datasets/cultura/*
 ft_datasets/cultura_clean/*
+ft_datasets/ccnet_cultura/*
 ft_datasets/grammar_dataset/*
 ft_datasets/graph_dataset/*
 ft_datasets/oasst1/*
