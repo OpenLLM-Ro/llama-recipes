@@ -13,8 +13,6 @@ import copy
 top = -1
 nproc = 8
 
-LOADED_DATA = None
-
 def _load_pretrain_from_disk(split):
 
     dataset = datasets.load_from_disk('ft_datasets/pretrain/ccnet_cultura-v0/{0}'.format(split))
