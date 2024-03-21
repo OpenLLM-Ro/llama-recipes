@@ -7,7 +7,7 @@ from dataclasses import dataclass
 @dataclass
 class ropretrain_dataset:
     dataset: str = "ropretrain_dataset"
-    train_split: str = "train+dev"
+    train_split: str = "train"
     test_split: str = "test"
     max_words: int = 1024
 

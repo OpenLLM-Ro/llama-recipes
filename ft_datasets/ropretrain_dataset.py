@@ -15,12 +15,10 @@ nproc = 8
 
 LOADED_DATA = None
 
-def _load_pretrain_from_disk():
-    global LOADED_DATA
-    if LOADED_DATA == None:
-        LOADED_DATA = datasets.load_from_disk('ft_datasets/ccnet_cultura')
+def _load_pretrain_from_disk(split):
 
-    return LOADED_DATA
+    dataset = datasets.load_from_disk('ft_datasets/pretrain/ccnet_cultura-v0/{0}'.format(split))
+    return dataset
 
 def chunk_list(lst, n):
         """Yield successive n-sized chunks from lst."""
@@ -66,12 +64,8 @@ def get_preprocessed_ropretrain_dataset(dataset_config, tokenizer, split, comput
     else:
         max_words = dataset_config.max_words
 
-    dataset = _load_pretrain_from_disk()
-    print("Len of entire pretraining dataset:", len(dataset), flush=True)
-
-    split_indexes = get_split(list(range(len(dataset))), split)
-    dataset = dataset.select(split_indexes)
-    print("Intermediate len of {1} split pretraining dataset: {0}".format(len(dataset), split), flush=True)
+    dataset = _load_pretrain_from_disk(split)
+    print("Len of {1} split pretraining dataset: {0} |".format(len(dataset), split), flush=True)
  
     if top != -1 and len(dataset) > top:
         dataset = dataset.select(range(top))
