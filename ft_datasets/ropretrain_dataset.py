@@ -10,8 +10,8 @@ import random
 import copy
 
 
-top = 15000
-nproc = 4
+top = -1
+nproc = 8
 
 LOADED_DATA = None
 
@@ -71,9 +71,9 @@ def get_preprocessed_ropretrain_dataset(dataset_config, tokenizer, split, comput
 
     split_indexes = get_split(list(range(len(dataset))), split)
     dataset = dataset.select(split_indexes)
-    print("Len of {1} split pretraining dataset: {0}".format(len(dataset), split), flush=True)
-
-    if top != -1:
+    print("Intermediate len of {1} split pretraining dataset: {0}".format(len(dataset), split), flush=True)
+ 
+    if top != -1 and len(dataset) > top:
         dataset = dataset.select(range(top))
     dataset = dataset.map(lambda sample: encode_texts(sample, tokenizer), num_proc=nproc, batched=True, remove_columns=["raw_text"], desc="Tokenize texts")
     
@@ -89,6 +89,8 @@ def get_preprocessed_ropretrain_dataset(dataset_config, tokenizer, split, comput
 
     dataset = dataset.map(lambda sample: prepare_input(sample, [], tokenizer, max_words), num_proc=nproc, remove_columns=["attention_mask", "input_ids"], desc="Build chunks of size {0}".format(max_words))
     dataset = dataset.map(flatten_chunks, batched=True, remove_columns=["hf_dict_chunks"], num_proc=nproc, desc="Flatten chunks")
+    print("Final len of {1} split pretraining dataset: {0}".format(len(dataset), split), flush=True)
+
     return dataset
 
 if __name__ == "__main__":
