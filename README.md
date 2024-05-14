@@ -1,3 +1,19 @@
+# RoLlama
+
+Official code used for training RoLlama family of models
+
+```
+@misc{masala2024openllmro,
+      title={OpenLLM-Ro - Technical Report on Open-source Romanian LLMs trained starting from Llama 2}, 
+      author={Mihai Masala and Denis C. Ilie-Ablachim and Dragos Corlatescu and Miruna Zavelca and Marius Leordeanu and Horia Velicu and Marius Popescu and Mihai Dascalu and Traian Rebedea},
+      year={2024},
+      eprint={2405.07703},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+# Original README 
+
 # Llama 2 Fine-tuning / Inference Recipes and Examples
 
 The 'llama-recipes' repository is a companion to the [Llama 2 model](https://github.com/facebookresearch/llama). The goal of this repository is to provide examples to quickly get started with fine-tuning for domain adaptation and how to run inference for the fine-tuned models. For ease of use, the examples use Hugging Face converted versions of the models. See steps for conversion of the model [here](#model-conversion-to-hugging-face).
