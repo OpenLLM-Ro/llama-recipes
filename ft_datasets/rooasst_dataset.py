@@ -289,7 +289,7 @@ def get_preprocessed_rooasst_dataset(dataset_config, tokenizer, split, compute_s
 
 if __name__ == "__main__":
     from transformers import AutoTokenizer, AutoModelForCausalLM
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token=os.getenv("HF_TOKEN"), legacy=False)
     tokenizer.add_special_tokens({"additional_special_tokens": ["[INST]", "[/INST]", "<<SYS>>\n", "\n<</SYS>>\n\n"]})
 
     get_preprocessed_rooasst_dataset(None, tokenizer, "full", compute_stats=True)

@@ -271,7 +271,7 @@ def get_preprocessed_oasst1(dataset_config, tokenizer, split):
 
 if __name__ == "__main__":
     from transformers import AutoTokenizer, AutoModelForCausalLM
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token="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")
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token=os.getenv("HF_TOKEN"))
 
     get_preprocessed_oasst1(None, tokenizer, "test")
     # d = load_dataset("full")

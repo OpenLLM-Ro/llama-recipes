@@ -98,7 +98,7 @@ def main(**kwargs):
     
 
     # Load the pre-trained model and setup its configuration
-    # model = LlamaForCausalLM.from_pretrained(train_config.model_name, load_in_8bit=True if train_config.quantization else None, device_map="auto" if train_config.quantization else None, use_auth_token="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")
+    # model = LlamaForCausalLM.from_pretrained(train_config.model_name, load_in_8bit=True if train_config.quantization else None, device_map="auto" if train_config.quantization else None, use_auth_token=os.getenv("HF_TOKEN"))
     # from transformers import LlamaConfig
     # configuration = LlamaConfig(vocab_size=1000, hidden_size=512, intermediate_size=512, num_hidden_layers=128, num_attention_heads=32)
     # model = LlamaForCausalLM(configuration)
@@ -160,7 +160,7 @@ def main(**kwargs):
         model.to(torch.bfloat16)
 
     # Load the tokenizer and add special tokens
-    tokenizer = AutoTokenizer.from_pretrained(train_config.model_name, use_auth_token="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", legacy=False)
+    tokenizer = AutoTokenizer.from_pretrained(train_config.model_name, use_auth_token=os.getenv("HF_TOKEN"), legacy=False)
     # tokenizer.pad_token_id = tokenizer.eos_token_id
     # if train_config.type_of_model == "foundational":
         

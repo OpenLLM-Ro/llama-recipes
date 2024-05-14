@@ -137,7 +137,7 @@ if __name__ == "__main__":
         print("{0}: Min: {1:3d} Mean: {2:.2f} Median: {3:.2f} Max: {4} Q5: {5:.2f} Q90: {6:2f}".format(t, np.min(x), np.mean(x), np.median(x), np.max(x), np.quantile(x, 0.05), np.quantile(x, 0.9)))
 
     #from transformers import AutoTokenizer, AutoModelForCausalLM
-    #tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
+    #tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token=os.getenv("HF_TOKEN"), legacy=False)
 
     #def get_text(sample):
     #    return {"text": sample["raw_text"]}

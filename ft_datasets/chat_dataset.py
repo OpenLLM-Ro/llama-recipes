@@ -675,7 +675,7 @@ def get_preprocessed_chatdataset(dataset_config, tokenizer, split):
 def compute_stats():
 
     from transformers import AutoTokenizer, AutoModelForCausalLM
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token="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", legacy=False)
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token=os.getenv("HF_TOKEN"), legacy=False)
 
     max_words = 99999999999999
 
@@ -727,7 +727,7 @@ if __name__ == "__main__":
 
     # compute_stats()
     from transformers import AutoTokenizer, AutoModelForCausalLM
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token="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", legacy=False)
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_auth_token=os.getenv("HF_TOKEN"), legacy=False)
     tokenizer.add_special_tokens({"pad_token": "<pad>"})
     # tokenizer.save_pretrained("tok_pad")
     

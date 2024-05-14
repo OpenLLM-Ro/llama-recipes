@@ -88,5 +88,5 @@ def get_preprocessed_ropretrain_dataset(dataset_config, tokenizer, split, comput
 if __name__ == "__main__":
 
     from transformers import AutoTokenizer, AutoModelForCausalLM
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token="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", legacy=False)
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_auth_token=os.getenv("HF_TOKEN"), legacy=False)
     get_preprocessed_ropretrain_dataset(None, tokenizer, "test")
