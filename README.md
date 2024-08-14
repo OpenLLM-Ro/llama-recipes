@@ -1,3 +1,6 @@
+# This code is obsolete, please use the new [repo](https://github.com/OpenLLM-Ro/LLaMA-Factory)!
+
+
 # RoLlama
 
 Official code used for training RoLlama family of models
